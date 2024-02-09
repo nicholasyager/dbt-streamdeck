@@ -3,7 +3,7 @@
 
 const myAction = new Action("com.nicholasyager.dbt-streamdeck.action");
 
-const overview = new Action("com.nicholasyager.dbt-streamdeck.overview");
+const model = new Action("com.nicholasyager.dbt-streamdeck.model");
 
 // Action Cache
 const MACTIONS = {};
@@ -17,24 +17,24 @@ $SD.onConnected(
   }
 );
 
-overview.onWillAppear(({ action, event, context, device, payload }) => {
+model.onWillAppear(({ action, event, context, device, payload }) => {
   MACTIONS[context] = new ModelOverview(context, payload);
   $SD.getSettings(context);
   $SD.getGlobalSettings(context);
 });
 
-overview.onKeyUp(({ action, context, device, event, payload }) => {
+model.onKeyUp(({ action, context, device, event, payload }) => {
   console.log("Your key code goes here!");
   MACTIONS[context].update();
 });
 
-overview.onDialRotate(({ action, context, device, event, payload }) => {
+model.onDialRotate(({ action, context, device, event, payload }) => {
   console.log("Your dial code goes here!");
 });
 
-console.log("overview", overview);
+console.log("model", model);
 
-overview.onDidReceiveSettings(({ context, payload }) => {
+model.onDidReceiveSettings(({ context, payload }) => {
   console.log("onDidReceiveSettings", context, payload);
   MACTIONS[context].didReceiveSettings(payload?.settings);
 });
