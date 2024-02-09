@@ -1,0 +1,2516 @@
+{
+  "metadata": {
+    "dbt_schema_version": "https://schemas.getdbt.com/dbt/run-results/v5.json",
+    "dbt_version": "1.7.6",
+    "generated_at": "2024-02-09T07:33:56.842645Z",
+    "invocation_id": "3a3f617b-f5b3-435a-9518-406d7a62d6f7",
+    "env": {
+      "DBT_CLOUD_PROJECT_ID": "32193",
+      "DBT_CLOUD_RUN_ID": "250062726",
+      "DBT_CLOUD_JOB_ID": "388614",
+      "DBT_CLOUD_RUN_REASON": "scheduled",
+      "DBT_CLOUD_RUN_REASON_CATEGORY": "scheduled",
+      "DBT_CLOUD_RUN_TRIGGER_CATEGORY": "scheduled",
+      "DBT_CLOUD_ENVIRONMENT_ID": "31520",
+      "DBT_CLOUD_ACCOUNT_ID": "19630"
+    }
+  },
+  "results": [
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:23.850796Z",
+          "completed_at": "2024-02-09T07:31:24.210616Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:24.212843Z",
+          "completed_at": "2024-02-09T07:31:24.790121Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.983809232711792,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e86-0001-6902906dd1ff"
+      },
+      "message": "SUCCESS 1",
+      "failures": null,
+      "unique_id": "model.hs_datamodel.base_team_gtm_core_static__sales_directory_history_2023_08",
+      "compiled": true,
+      "compiled_code": "\n\nwith\n\n\n\nsource  as (\n    select \"REPORT_MONTH\",\n  \"PKEY\",\n  \"WORKDAY_EMPLOYEE_ID\",\n  \"EMPLOYEE_NAME_WORKDAY\",\n  \"SALES_ROLE\",\n  \"JOB_PROFILE\",\n  \"GEOGRAPHY\",\n  \"COUNTRY\",\n  \"SEGMENT\",\n  \"SEGMENT_ROLE\",\n  \"MONTH_IN_FUNNEL\",\n  \"SEGMENT_MONTH_IN_FUNNEL\",\n  \"FINAL_MONTH_IN_FUNNEL\",\n  \"MANAGER_WORKDAY_EMPLOYEE_ID\",\n  \"MANAGER_NAME_WORKDAY\",\n  \"DIRECTOR_WORKDAY_EMPLOYEE_ID\",\n  \"DIRECTOR_NAME_WORKDAY\",\n  \"SENIOR_DIRECTOR_WORKDAY_EMPLOYEE_ID\",\n  \"SENIOR_DIRECTOR_NAME_WORKDAY\",\n  \"VP_WORKDAY_EMPLOYEE_ID\",\n  \"VP_NAME_WORKDAY\",\n  \"SENIOR_VP_WORKDAY_EMPLOYEE_ID\",\n  \"SENIOR_VP_NAME_WORKDAY\",\n  \"GO_TO_MARKET_WORKDAY_EMPLOYEE_ID\",\n  \"GTM_DIRECTOR_NAME\",\n  \"GROSS_QUOTA\",\n  \"STREET_QUOTA\",\n  \"RELIEF_TAKEN\",\n  \"INSTALL_BASE_QUOTA_PERCENT\",\n  \"TOTAL_MEETINGS_QUOTA\",\n  \"STREET_MEETINGS_QUOTA\",\n  \"MEETINGS_RELIEF_TAKEN\",\n  \"STREET_ACTIVITY_QUOTA\",\n  \"ACTIVITY_RELIEF\",\n  \"GROSS_ACTIVITY_QUOTA\",\n  \"ACTIVITY_TYPE\",\n  \"MARKETING_MEETINGS_QUOTA\",\n  \"DELTA_IN_MULTIPLIER\",\n  \"GS_MULTIPLIER\",\n  \"NON_GS_MULTIPLIER\",\n  \"Q1_DELTA_IN_MULTIPLIER\",\n  \"HIRING_SOURCE\",\n  \"TYPE_OF_CHANGE\",\n  \"BUSINESS_TITLE\",\n  \"EMPLOYEE_OFFICE\",\n  \"EMPLOYEE_LOCATION\",\n  \"HIRE_DATE\",\n  \"FIRST_NAME\",\n  \"LAST_NAME\",\n  \"SALES_OPS_LANGUAGE\",\n  \"START_DATE\",\n  \"END_DATE\",\n  \"MANAGEMENT_LEVEL\",\n  \"QUOTA_INFO\",\n  \"QUOTA_UPDATED_UTC\",\n  \"SUBSIDIARY\",\n  \"TERMINATION_DATE\",\n  \"ROW_INFO\",\n  \"CORPORATE_MONTHLY_QUOTA\",\n  \"MAX_MEETINGS_QUOTA\",\n  \"MAX_ACTIVITY_QUOTA\",\n  \"MAX_GROSS_QUOTA\",\n  \"IS_ACTIVE_HEADCOUNT_TRACKER\",\n  \"ROW_UPDATED_UTC\"\n    from prod_db.team_gtm_core_static.sales_directory_history_2023_08\n)\n\nselect * from source",
+      "relation_name": "prod_db.dbt_staging.base_team_gtm_core_static__sales_directory_history_2023_08"
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:23.881314Z",
+          "completed_at": "2024-02-09T07:31:23.881317Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:23.895124Z",
+          "completed_at": "2024-02-09T07:31:25.396825Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 1.601072072982788,
+      "adapter_response": {
+        "_message": "INSERT 16",
+        "code": "INSERT",
+        "rows_affected": 16
+      },
+      "message": "INSERT 16",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_country_segmentation_mapping",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:23.874069Z",
+          "completed_at": "2024-02-09T07:31:23.874073Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:23.884921Z",
+          "completed_at": "2024-02-09T07:31:25.478801Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 1.6822588443756104,
+      "adapter_response": {
+        "_message": "INSERT 21",
+        "code": "INSERT",
+        "rows_affected": 21
+      },
+      "message": "INSERT 21",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.employee_country_to_subsidiary_map",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:24.833090Z",
+          "completed_at": "2024-02-09T07:31:24.833093Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:24.834276Z",
+          "completed_at": "2024-02-09T07:31:26.555884Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 1.7687528133392334,
+      "adapter_response": {
+        "_message": "INSERT 28",
+        "code": "INSERT",
+        "rows_affected": 28
+      },
+      "message": "INSERT 28",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_gtm_segmentation_mapping",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:25.534442Z",
+          "completed_at": "2024-02-09T07:31:25.534445Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:25.535574Z",
+          "completed_at": "2024-02-09T07:31:27.225758Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 1.732412576675415,
+      "adapter_response": {
+        "_message": "INSERT 15",
+        "code": "INSERT",
+        "rows_affected": 15
+      },
+      "message": "INSERT 15",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_historical_sales_country_segmentation_mapping",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:25.454912Z",
+          "completed_at": "2024-02-09T07:31:25.454915Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:25.456055Z",
+          "completed_at": "2024-02-09T07:31:28.385327Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 2.978703260421753,
+      "adapter_response": {
+        "_message": "INSERT 16",
+        "code": "INSERT",
+        "rows_affected": 16
+      },
+      "message": "INSERT 16",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_historical_gtm_segmentation_mapping",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:27.272341Z",
+          "completed_at": "2024-02-09T07:31:27.272345Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:27.273465Z",
+          "completed_at": "2024-02-09T07:31:28.827904Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 1.7140576839447021,
+      "adapter_response": {
+        "_message": "INSERT 20",
+        "code": "INSERT",
+        "rows_affected": 20
+      },
+      "message": "INSERT 20",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_historical_top_of_waterfall_segment_mapping",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:26.605513Z",
+          "completed_at": "2024-02-09T07:31:26.605517Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:26.606721Z",
+          "completed_at": "2024-02-09T07:31:29.634957Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 3.142606019973755,
+      "adapter_response": {
+        "_message": "INSERT 18",
+        "code": "INSERT",
+        "rows_affected": 18
+      },
+      "message": "INSERT 18",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_historical_sales_geography_segmentation_mapping",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:29.067858Z",
+          "completed_at": "2024-02-09T07:31:29.067863Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:29.094866Z",
+          "completed_at": "2024-02-09T07:31:31.273712Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 2.3864617347717285,
+      "adapter_response": {
+        "_message": "INSERT 1",
+        "code": "INSERT",
+        "rows_affected": 1
+      },
+      "message": "INSERT 1",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_role_overrides",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:29.751884Z",
+          "completed_at": "2024-02-09T07:31:29.751888Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:29.753033Z",
+          "completed_at": "2024-02-09T07:31:31.359957Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 1.7946081161499023,
+      "adapter_response": {
+        "_message": "INSERT 27",
+        "code": "INSERT",
+        "rows_affected": 27
+      },
+      "message": "INSERT 27",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_sales_geography_segmentation_mapping",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:23.867746Z",
+          "completed_at": "2024-02-09T07:31:23.937317Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:23.951371Z",
+          "completed_at": "2024-02-09T07:31:33.792669Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 10.107877016067505,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e86-0001-6902906dd1ef"
+      },
+      "message": "SUCCESS 1",
+      "failures": null,
+      "unique_id": "model.hs_datamodel.int_employees__end_of_month_enriched",
+      "compiled": true,
+      "compiled_code": "\nwith\n\nmonths as (\n    select distinct the_month\n    from prod_db.dbt_utils.all_days\n    where the_month <= date_trunc('month', current_date)\n),\n\nemployees as (\n    select\n        workday_employee_id,\n        full_name,\n        email,\n        hire_date,\n        is_mstd_eligible,\n        legal_name_in_general_display_format as legal_full_name,\n        l1_manager_workday_employee_id,\n        l1_manager,\n        managed_from_date,\n        managed_to_date,\n        l2_manager,\n        l2_managed_from_date,\n        l2_managed_to_date,\n        l3_manager,\n        l3_managed_from_date,\n        l3_managed_to_date,\n        employee_last_date,\n        cost_center,\n        cost_center_id,\n        department,\n        employee_location,\n        job_profile,\n        job_family,\n        segment,\n        segment_role,\n        geography,\n        country,\n        is_contractor,\n        valid_from,\n        valid_to\n    from prod_db.dbt_staging.stg_core_data__employee_history\n\n),\n\nnetsuite_employees as (\n    select\n        workday_id as workday_employee_id,\n        hubspot_53_ownerid as p53_owner_id,\n        hubspotter_id\n\n    from prod_db.dbt_staging.stg_core_data__netsuite_entity_employee_history_latest\n\n    where last_employee_record = True\n\n    -- In one execptionally rare cases, there are duplicate records in this\n    -- table. When this happens the duplicate record has a `null` owner ID. To\n    -- obtain the ideal record, we qualify the selection and order it by the\n    -- owner ID such that we'll favor the non-null value over the null value.\n    qualify\n        row_number() over (\n            partition by workday_employee_id\n            order by coalesce(p53_owner_id, -1) desc\n        ) = 1\n),\n\nmonth_employees as (\n    select\n        employees.*,\n        months.the_month as report_month\n    from months\n    left join\n        employees on\n        employees.valid_from <  \n\n    dateadd(\n        month,\n        1,\n        months.the_month\n        )\n\n\n        and (\n            employees.valid_to >= months.the_month\n            or employees.valid_to is null\n        )\n\n    -- Remove records representing months with no workday employees.\n    where employees.workday_employee_id is not null\n\n    /*\n    This qualify is being purposefully added, as this model has some\n    non-standard data joining logic at play. Within\n    `stg_core_data__employee_history`, terminated employees will do not have a\n    \"current\" record with a `null` `valid_to` field. As a result, our standard\n    approach for joining moths will exclude the last month of employment for\n    terminated employeses. Instead, we must include all employee records with\n    a `valid_to` value >= the month being joined, which can introduce duplicate\n    values. As such, this qualify deduplicates by finding the most recent record\n    for each employee month.\n    */\n    qualify\n        row_number() over (\n            partition by\n                workday_employee_id,\n                report_month\n            order by valid_from desc\n        ) = 1\n\n),\n\nmonth_employees_mapped as (\n\n    select\n        month_employees.*,\n        netsuite_employees.p53_owner_id,\n        netsuite_employees.hubspotter_id\n    from month_employees\n    left join\n        netsuite_employees on\n        month_employees.workday_employee_id\n        = netsuite_employees.workday_employee_id\n\n),\n\nhubspotters as (\n    select\n        date_trunc('month', report_effective_date) as report_month,\n\n        workday_employee_id,\n        legal_full_name,\n        preferred_full_name,\n        hire_date,\n        carve_location\n    from prod_db.dbt_staging.stg_workday__hubspotters\n\n    \n\n    qualify\n        row_number() over (\n            partition by workday_employee_id, report_month\n            order by report_effective_date desc\n        ) = 1\n\n),\n\nfinal as (\n\n    select\n        md5(cast(coalesce(cast(month_employees_mapped.workday_employee_id as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(month_employees_mapped.report_month as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as employee_month_key,\n        month_employees_mapped.report_month,\n        month_employees_mapped.workday_employee_id,\n\n        month_employees_mapped.p53_owner_id,\n        month_employees_mapped.hubspotter_id,\n\n        month_employees_mapped.full_name,\n        month_employees_mapped.email,\n        coalesce(\n            hubspotters.hire_date,\n            month_employees_mapped.hire_date\n        ) as hire_date,\n        month_employees_mapped.is_mstd_eligible,\n        coalesce(\n            hubspotters.legal_full_name,\n            month_employees_mapped.legal_full_name\n        ) as legal_full_name,\n        coalesce(\n            hubspotters.preferred_full_name,\n            month_employees_mapped.legal_full_name\n        ) as preferred_full_name,\n        month_employees_mapped.l1_manager_workday_employee_id,\n        month_employees_mapped.l1_manager,\n        month_employees_mapped.managed_from_date,\n        month_employees_mapped.managed_to_date,\n        month_employees_mapped.l2_manager,\n        month_employees_mapped.l2_managed_from_date,\n        month_employees_mapped.l2_managed_to_date,\n        month_employees_mapped.l3_manager,\n        month_employees_mapped.l3_managed_from_date,\n        month_employees_mapped.l3_managed_to_date,\n        month_employees_mapped.employee_last_date,\n        month_employees_mapped.cost_center,\n        month_employees_mapped.cost_center_id,\n        month_employees_mapped.department,\n        month_employees_mapped.employee_location,\n        month_employees_mapped.job_profile,\n        month_employees_mapped.job_family,\n        month_employees_mapped.segment,\n        month_employees_mapped.segment_role,\n        month_employees_mapped.geography,\n        month_employees_mapped.country,\n        hubspotters.carve_location,\n        month_employees_mapped.is_contractor\n    from month_employees_mapped\n    left join\n        hubspotters on\n        month_employees_mapped.workday_employee_id = hubspotters.workday_employee_id\n        and month_employees_mapped.report_month = hubspotters.report_month\n)\n\nselect * from final",
+      "relation_name": "prod_db.dbt_intermediate.int_employees__end_of_month_enriched"
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:34.066434Z",
+          "completed_at": "2024-02-09T07:31:34.066438Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:34.093342Z",
+          "completed_at": "2024-02-09T07:31:37.545247Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 3.8357393741607666,
+      "adapter_response": {
+        "_message": "INSERT 22",
+        "code": "INSERT",
+        "rows_affected": 22
+      },
+      "message": "INSERT 22",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_top_of_waterfall_segment_mapping",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:38.052462Z",
+          "completed_at": "2024-02-09T07:31:38.081352Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:38.134018Z",
+          "completed_at": "2024-02-09T07:31:43.316077Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 5.654832363128662,
+      "adapter_response": {
+        "_message": "SUCCESS 0",
+        "code": "SUCCESS",
+        "rows_affected": 0,
+        "query_id": "01b23b03-0609-0e86-0001-6902906dd94b"
+      },
+      "message": "SUCCESS 0",
+      "failures": null,
+      "unique_id": "snapshot.hs_datamodel.snp_sales_directory__headcount_actuals_raw",
+      "compiled": true,
+      "compiled_code": "\n\n\n\nselect\n    primary_key,\n    hs__rundate,\n    employee_record\nfrom prod_db.salesdirectory.headcount_actuals_raw\n",
+      "relation_name": "prod_db.dbt_staging.snp_sales_directory__headcount_actuals_raw"
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:43.828489Z",
+          "completed_at": "2024-02-09T07:31:43.851084Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:43.888208Z",
+          "completed_at": "2024-02-09T07:31:47.977537Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 4.23911714553833,
+      "adapter_response": {
+        "_message": "SUCCESS 0",
+        "code": "SUCCESS",
+        "rows_affected": 0,
+        "query_id": "01b23b03-0609-0e85-0001-6902906de7bf"
+      },
+      "message": "SUCCESS 0",
+      "failures": null,
+      "unique_id": "snapshot.hs_datamodel.snp_sales_directory__headcount_forecasts_raw",
+      "compiled": true,
+      "compiled_code": "\n\n\n\nselect\n    md5(cast(coalesce(cast(employee_record:\"Period\" as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(employee_record:\"Region L2.No Place Holders\" as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(employee_record:\"Segment Role\" as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(employee_record:\"Segment.Reporting.Rep\" as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(employee_record:\"Rep Tenure L2\" as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as primary_key,\n\n    hs__rundate,\n    employee_record\n\nfrom prod_db.salesdirectory.headcount_forecasts_raw\n",
+      "relation_name": "prod_db.dbt_staging.snp_sales_directory__headcount_forecasts_raw"
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:28.437132Z",
+          "completed_at": "2024-02-09T07:31:28.437136Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:28.438329Z",
+          "completed_at": "2024-02-09T07:31:53.086973Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 24.89687967300415,
+      "adapter_response": {
+        "_message": "INSERT 41158",
+        "code": "INSERT",
+        "rows_affected": 41158
+      },
+      "message": "INSERT 41158",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_rep_historical_headcount",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:48.031399Z",
+          "completed_at": "2024-02-09T07:31:48.039409Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:48.040706Z",
+          "completed_at": "2024-02-09T07:31:56.128524Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 8.14004111289978,
+      "adapter_response": {
+        "_message": "SUCCESS 0",
+        "code": "SUCCESS",
+        "rows_affected": 0,
+        "query_id": "01b23b03-0609-0e86-0001-6902906ddc83"
+      },
+      "message": "SUCCESS 0",
+      "failures": null,
+      "unique_id": "snapshot.hs_datamodel.snp_sales_directory__sales_directory_monthly_raw",
+      "compiled": true,
+      "compiled_code": "\n\n\n\nselect\n    primary_key,\n    hs__rundate,\n    employee_record\nfrom prod_db.salesdirectory.sales_directory_monthly_raw\n",
+      "relation_name": "prod_db.dbt_staging.snp_sales_directory__sales_directory_monthly_raw"
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:56.181430Z",
+          "completed_at": "2024-02-09T07:31:56.192788Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:56.194243Z",
+          "completed_at": "2024-02-09T07:31:56.511644Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.3784608840942383,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e85-0001-6902906dea5b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_base_team_gtm_core_static__sales_directory_history_2023_08_pkey.da427939d5",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect pkey\nfrom prod_db.dbt_staging.base_team_gtm_core_static__sales_directory_history_2023_08\nwhere pkey is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:56.561289Z",
+          "completed_at": "2024-02-09T07:31:56.567035Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:56.568220Z",
+          "completed_at": "2024-02-09T07:31:56.863406Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.3576927185058594,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e86-0001-6902906ddd7f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_base_team_gtm_core_static__sales_directory_history_2023_08_report_month.faf9c23844",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect report_month\nfrom prod_db.dbt_staging.base_team_gtm_core_static__sales_directory_history_2023_08\nwhere report_month is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:53.466209Z",
+          "completed_at": "2024-02-09T07:31:53.470641Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:53.507774Z",
+          "completed_at": "2024-02-09T07:31:56.949662Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 3.5774264335632324,
+      "adapter_response": {
+        "_message": "SUCCESS 0",
+        "code": "SUCCESS",
+        "rows_affected": 0,
+        "query_id": "01b23b03-0609-0e85-0001-6902906dea4f"
+      },
+      "message": "SUCCESS 0",
+      "failures": null,
+      "unique_id": "snapshot.hs_datamodel.snp_sales_directory__sales_directory_override_raw",
+      "compiled": true,
+      "compiled_code": "\n\n\n\nselect\n    primary_key,\n    hs__rundate,\n    employee_record\nfrom prod_db.salesdirectory.sales_directory_override_raw\n",
+      "relation_name": "prod_db.dbt_staging.snp_sales_directory__sales_directory_override_raw"
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:56.922041Z",
+          "completed_at": "2024-02-09T07:31:56.928864Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:56.930112Z",
+          "completed_at": "2024-02-09T07:31:57.155690Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.27407312393188477,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e85-0001-6902906deaa7"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_base_team_gtm_core_static__sales_directory_history_2023_08_workday_employee_id.37817579bf",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect workday_employee_id\nfrom prod_db.dbt_staging.base_team_gtm_core_static__sales_directory_history_2023_08\nwhere workday_employee_id is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:57.199010Z",
+          "completed_at": "2024-02-09T07:31:57.204288Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:57.205485Z",
+          "completed_at": "2024-02-09T07:31:57.488773Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.3331575393676758,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e86-0001-6902906ddd9f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_employee_country_to_subsidiary_map_country.e33a890266",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect country\nfrom prod_db.dbt_staging.employee_country_to_subsidiary_map\nwhere country is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:57.011556Z",
+          "completed_at": "2024-02-09T07:31:57.018414Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:57.019604Z",
+          "completed_at": "2024-02-09T07:31:57.577040Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.6376097202301025,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e85-0001-6902906deaaf"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.unique_base_team_gtm_core_static__sales_directory_history_2023_08_pkey.482cac6991",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nselect\n    pkey as unique_field,\n    count(*) as n_records\n\nfrom prod_db.dbt_staging.base_team_gtm_core_static__sales_directory_history_2023_08\nwhere pkey is not null\ngroup by pkey\nhaving count(*) > 1\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:57.535068Z",
+          "completed_at": "2024-02-09T07:31:57.541076Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:57.542299Z",
+          "completed_at": "2024-02-09T07:31:57.749653Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.2576780319213867,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e86-0001-6902906dddaf"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_employee_country_to_subsidiary_map_subsidiary.6a495d2dfb",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect subsidiary\nfrom prod_db.dbt_staging.employee_country_to_subsidiary_map\nwhere subsidiary is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:57.652256Z",
+          "completed_at": "2024-02-09T07:31:57.657000Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:57.658230Z",
+          "completed_at": "2024-02-09T07:31:57.961275Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.4024336338043213,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e85-0001-6902906deae3"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_seed_sales_directory_role_overrides_sales_role.6b906b4d98",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect sales_role\nfrom prod_db.team_gtm_core.seed_sales_directory_role_overrides\nwhere sales_role is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:57.796338Z",
+          "completed_at": "2024-02-09T07:31:57.803331Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:57.804553Z",
+          "completed_at": "2024-02-09T07:31:58.261322Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.6353256702423096,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e86-0001-6902906dddcf"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_seed_sales_directory_role_overrides_valid_from.eda2518800",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect valid_from\nfrom prod_db.team_gtm_core.seed_sales_directory_role_overrides\nwhere valid_from is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:58.057752Z",
+          "completed_at": "2024-02-09T07:31:58.066120Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:58.067348Z",
+          "completed_at": "2024-02-09T07:31:58.333683Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.4425339698791504,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e85-0001-6902906deb0b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_seed_sales_directory_role_overrides_workday_employee_id.ba1a9b2f13",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect workday_employee_id\nfrom prod_db.team_gtm_core.seed_sales_directory_role_overrides\nwhere workday_employee_id is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:31.677584Z",
+          "completed_at": "2024-02-09T07:31:31.677589Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:31.726542Z",
+          "completed_at": "2024-02-09T07:31:59.192135Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 27.737566709518433,
+      "adapter_response": {
+        "_message": "INSERT 17186",
+        "code": "INSERT",
+        "rows_affected": 17186
+      },
+      "message": "INSERT 17186",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_time_to_ramp_quotas_preanaplan_historical_202102_to_202202",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:58.490451Z",
+          "completed_at": "2024-02-09T07:31:58.553663Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:58.590475Z",
+          "completed_at": "2024-02-09T07:31:59.228963Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.9709231853485107,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e86-0001-6902906dde3b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_int_employees__end_of_month_enriched_employee_month_key.b0c4526499",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect employee_month_key\nfrom prod_db.dbt_intermediate.int_employees__end_of_month_enriched\nwhere employee_month_key is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:58.580603Z",
+          "completed_at": "2024-02-09T07:31:58.631714Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:58.653374Z",
+          "completed_at": "2024-02-09T07:31:59.241569Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.9029440879821777,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b03-0609-0e85-0001-6902906deb3f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_int_employees__end_of_month_enriched_report_month.615b7261cc",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect report_month\nfrom prod_db.dbt_intermediate.int_employees__end_of_month_enriched\nwhere report_month is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:59.523714Z",
+          "completed_at": "2024-02-09T07:31:59.609374Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:59.682937Z",
+          "completed_at": "2024-02-09T07:32:00.484345Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 1.201500415802002,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906ddec3"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_int_employees__end_of_month_enriched_workday_employee_id.95e6a0c330",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect workday_employee_id\nfrom prod_db.dbt_intermediate.int_employees__end_of_month_enriched\nwhere workday_employee_id is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:59.667760Z",
+          "completed_at": "2024-02-09T07:31:59.727733Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:59.795436Z",
+          "completed_at": "2024-02-09T07:32:00.792239Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 1.3749253749847412,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e85-0001-6902906debd7"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.unique_int_employees__end_of_month_enriched_employee_month_key.31228de649",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nselect\n    employee_month_key as unique_field,\n    count(*) as n_records\n\nfrom prod_db.dbt_intermediate.int_employees__end_of_month_enriched\nwhere employee_month_key is not null\ngroup by employee_month_key\nhaving count(*) > 1\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:00.707379Z",
+          "completed_at": "2024-02-09T07:32:01.349756Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:01.407391Z",
+          "completed_at": "2024-02-09T07:32:02.292658Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 1.653351068496704,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906ddf57"
+      },
+      "message": "SUCCESS 1",
+      "failures": null,
+      "unique_id": "model.hs_datamodel.stg_sales_directory__headcount_forecasts",
+      "compiled": true,
+      "compiled_code": "\n\nwith\n\nheadcount_raw as (\n    select\n        primary_key as primary_key,\n        hs__rundate as updated_at,\n        iff(\n                lower(employee_record:\"Headcount Forecast Snowflake\"::varchar) = 'null',\n                null,\n                employee_record:\"Headcount Forecast Snowflake\"::varchar\n            ) as headcount_forecast_snowflake\n                ,\n            \n        iff(\n                lower(employee_record:\"Period\"::varchar) = 'null',\n                null,\n                employee_record:\"Period\"::varchar\n            ) as period\n                ,\n            \n        iff(\n                lower(employee_record:\"Region L2.No Place Holders\"::varchar) = 'null',\n                null,\n                employee_record:\"Region L2.No Place Holders\"::varchar\n            ) as region_l2no_place_holders\n                ,\n            \n        iff(\n                lower(employee_record:\"Rep Tenure L2\"::varchar) = 'null',\n                null,\n                employee_record:\"Rep Tenure L2\"::varchar\n            ) as rep_tenure_l2\n                ,\n            \n        iff(\n                lower(employee_record:\"Segment Role\"::varchar) = 'null',\n                null,\n                employee_record:\"Segment Role\"::varchar\n            ) as segment_role\n                ,\n            \n        iff(\n                lower(employee_record:\"Segment.Reporting.Rep\"::varchar) = 'null',\n                null,\n                employee_record:\"Segment.Reporting.Rep\"::varchar\n            ) as segmentreportingrep\n        \n\n    from prod_db.dbt_staging.snp_sales_directory__headcount_forecasts_raw\n\n    -- Due to the way that the Anaplan integration loads data, we cannot use the\n    -- dbt_valid_to field to indicate final records in a month. Instead, we will\n    -- use the following qualify statement.\n    qualify\n        row_number() over (\n            partition by primary_key\n            order by updated_at desc\n        ) = 1\n),\n\nfinal as (\n    select\n        primary_key as headcount_forecast_key,\n        (period || '-01' )::date as report_month,\n        segment_role,\n        region_l2no_place_holders as region,\n        segmentreportingrep as segment,\n        try_to_number(rep_tenure_l2) as months_in_funnel,\n        \n    case\n        when months_in_funnel <= 6 then\n            '0-6'\n        when months_in_funnel <= 12 then\n            '7-12'\n        when months_in_funnel <= 18 then\n            '13-18'\n        else  '19+'\n    end\n as rep_tenure,\n        try_to_number(headcount_forecast_snowflake) as value,\n        updated_at\n    from headcount_raw\n)\n\nselect * from final",
+      "relation_name": "prod_db.dbt_staging.stg_sales_directory__headcount_forecasts"
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:59.691479Z",
+          "completed_at": "2024-02-09T07:32:01.322810Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:01.365252Z",
+          "completed_at": "2024-02-09T07:32:02.311013Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 2.742926597595215,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e85-0001-6902906dec77"
+      },
+      "message": "SUCCESS 1",
+      "failures": null,
+      "unique_id": "model.hs_datamodel.stg_sales_directory__headcount_actuals",
+      "compiled": true,
+      "compiled_code": "\n\nwith\n\nheadcount_raw as (\n    select\n        primary_key::varchar as primary_key,\n        hs__rundate as updated_at,\n        iff(\n                lower(employee_record:\"Geography\"::varchar) = 'null',\n                null,\n                employee_record:\"Geography\"::varchar\n            ) as geography\n                ,\n            \n        iff(\n                lower(employee_record:\"Job Profile\"::varchar) = 'null',\n                null,\n                employee_record:\"Job Profile\"::varchar\n            ) as job_profile\n                ,\n            \n        iff(\n                lower(employee_record:\"Key\"::varchar) = 'null',\n                null,\n                employee_record:\"Key\"::varchar\n            ) as key\n                ,\n            \n        iff(\n                lower(employee_record:\"Language\"::varchar) = 'null',\n                null,\n                employee_record:\"Language\"::varchar\n            ) as language\n                ,\n            \n        iff(\n                lower(employee_record:\"MIF\"::varchar) = 'null',\n                null,\n                employee_record:\"MIF\"::varchar\n            ) as mif\n                ,\n            \n        iff(\n                lower(employee_record:\"Month Start Date\"::varchar) = 'null',\n                null,\n                employee_record:\"Month Start Date\"::varchar\n            ) as month_start_date\n                ,\n            \n        iff(\n                lower(employee_record:\"Name\"::varchar) = 'null',\n                null,\n                employee_record:\"Name\"::varchar\n            ) as name\n                ,\n            \n        iff(\n                lower(employee_record:\"Office\"::varchar) = 'null',\n                null,\n                employee_record:\"Office\"::varchar\n            ) as office\n                ,\n            \n        iff(\n                lower(employee_record:\"Position L3\"::varchar) = 'null',\n                null,\n                employee_record:\"Position L3\"::varchar\n            ) as position_l3\n                ,\n            \n        iff(\n                lower(employee_record:\"Region\"::varchar) = 'null',\n                null,\n                employee_record:\"Region\"::varchar\n            ) as region\n                ,\n            \n        iff(\n                lower(employee_record:\"Segment\"::varchar) = 'null',\n                null,\n                employee_record:\"Segment\"::varchar\n            ) as segment\n                ,\n            \n        iff(\n                lower(employee_record:\"Segment Role\"::varchar) = 'null',\n                null,\n                employee_record:\"Segment Role\"::varchar\n            ) as segment_role\n                ,\n            \n        iff(\n                lower(employee_record:\"Surround Sound Role\"::varchar) = 'null',\n                null,\n                employee_record:\"Surround Sound Role\"::varchar\n            ) as surround_sound_role\n                ,\n            \n        iff(\n                lower(employee_record:\"Time\"::varchar) = 'null',\n                null,\n                employee_record:\"Time\"::varchar\n            ) as time\n                ,\n            \n        iff(\n                lower(employee_record:\"Workday ID\"::varchar) = 'null',\n                null,\n                employee_record:\"Workday ID\"::varchar\n            ) as workday_id\n        \n\n    from prod_db.dbt_staging.snp_sales_directory__headcount_actuals_raw\n\n    -- Due to the way that the Anaplan integration loads data, we cannot use the\n    -- dbt_valid_to field to indicate final records in a month. Instead, we will\n    -- use the following qualify statement.\n    qualify\n        row_number() over (\n            partition by primary_key\n            order by updated_at desc\n        ) = 1\n),\n\nfinal as (\n    select\n        primary_key as headcount_key,\n        workday_id as workday_employee_id,\n        month_start_date::date as report_month,\n        name as workday_employee_name,\n        geography,\n        region,\n        segment,\n        segment_role,\n        office,\n        job_profile,\n        try_to_number(mif) as months_in_funnel,\n        updated_at\n    from headcount_raw\n)\n\nselect * from final",
+      "relation_name": "prod_db.dbt_staging.stg_sales_directory__headcount_actuals"
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:02.344356Z",
+          "completed_at": "2024-02-09T07:32:02.350451Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:02.351662Z",
+          "completed_at": "2024-02-09T07:32:02.599669Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.30890965461730957,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906ddf87"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_forecasts_headcount_forecast_key.6256c85b68",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect headcount_forecast_key\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_forecasts\nwhere headcount_forecast_key is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:02.372560Z",
+          "completed_at": "2024-02-09T07:32:02.378728Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:02.380000Z",
+          "completed_at": "2024-02-09T07:32:02.672936Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.3550903797149658,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e85-0001-6902906decb3"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_forecasts_months_in_funnel.6eae9542db",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect months_in_funnel\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_forecasts\nwhere months_in_funnel is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:02.656496Z",
+          "completed_at": "2024-02-09T07:32:02.662208Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:02.663417Z",
+          "completed_at": "2024-02-09T07:32:02.953339Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.33968138694763184,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906ddfb7"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_forecasts_rep_tenure.35a8c23286",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect rep_tenure\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_forecasts\nwhere rep_tenure is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:02.730711Z",
+          "completed_at": "2024-02-09T07:32:02.736047Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:02.737250Z",
+          "completed_at": "2024-02-09T07:32:03.022904Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.344512939453125,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906ddfbb"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_forecasts_report_month.2d2f761dd9",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect report_month\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_forecasts\nwhere report_month is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:02.999387Z",
+          "completed_at": "2024-02-09T07:32:03.006011Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:03.007266Z",
+          "completed_at": "2024-02-09T07:32:03.248094Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.29036688804626465,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906ddff3"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_forecasts_updated_at.1f2577b15d",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect updated_at\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_forecasts\nwhere updated_at is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:03.079042Z",
+          "completed_at": "2024-02-09T07:32:03.085810Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:03.087400Z",
+          "completed_at": "2024-02-09T07:32:03.342062Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.3069431781768799,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906ddff7"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.unique_stg_sales_directory__headcount_forecasts_headcount_forecast_key.a53db2f467",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nselect\n    headcount_forecast_key as unique_field,\n    count(*) as n_records\n\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_forecasts\nwhere headcount_forecast_key is not null\ngroup by headcount_forecast_key\nhaving count(*) > 1\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:03.292916Z",
+          "completed_at": "2024-02-09T07:32:03.298556Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:03.299734Z",
+          "completed_at": "2024-02-09T07:32:03.616926Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.36733126640319824,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906df013"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_actuals_headcount_key.743131727b",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect headcount_key\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_actuals\nwhere headcount_key is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:03.388941Z",
+          "completed_at": "2024-02-09T07:32:03.395671Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:03.396908Z",
+          "completed_at": "2024-02-09T07:32:03.737271Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.3976285457611084,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e85-0001-6902906ded17"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_actuals_months_in_funnel.de85f34fb6",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect months_in_funnel\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_actuals\nwhere months_in_funnel is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:03.663422Z",
+          "completed_at": "2024-02-09T07:32:03.668845Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:03.670076Z",
+          "completed_at": "2024-02-09T07:32:03.999445Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.38086390495300293,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906df043"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_actuals_report_month.ac1cc732d5",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect report_month\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_actuals\nwhere report_month is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:03.789703Z",
+          "completed_at": "2024-02-09T07:32:03.795200Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:03.796412Z",
+          "completed_at": "2024-02-09T07:32:04.030914Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.28927087783813477,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906df05b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_actuals_updated_at.d9044094dd",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect updated_at\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_actuals\nwhere updated_at is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:04.047769Z",
+          "completed_at": "2024-02-09T07:32:04.055535Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:04.056757Z",
+          "completed_at": "2024-02-09T07:32:04.409929Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.4693598747253418,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e85-0001-6902906ded67"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_actuals_workday_employee_id.98b36214e7",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect workday_employee_id\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_actuals\nwhere workday_employee_id is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:04.082281Z",
+          "completed_at": "2024-02-09T07:32:04.088052Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:04.089423Z",
+          "completed_at": "2024-02-09T07:32:04.488141Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.4552466869354248,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906df08f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__headcount_actuals_workday_employee_name.3a8297b2c9",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect workday_employee_name\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_actuals\nwhere workday_employee_name is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:04.519639Z",
+          "completed_at": "2024-02-09T07:32:04.527859Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:04.529070Z",
+          "completed_at": "2024-02-09T07:32:05.117716Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.751246452331543,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e85-0001-6902906dedc3"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.unique_stg_sales_directory__headcount_actuals_headcount_key.15ed6431bf",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nselect\n    headcount_key as unique_field,\n    count(*) as n_records\n\nfrom prod_db.dbt_staging.stg_sales_directory__headcount_actuals\nwhere headcount_key is not null\ngroup by headcount_key\nhaving count(*) > 1\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:01.055595Z",
+          "completed_at": "2024-02-09T07:32:07.326196Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:07.353117Z",
+          "completed_at": "2024-02-09T07:32:08.977397Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 7.990708112716675,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906df1c3"
+      },
+      "message": "SUCCESS 1",
+      "failures": null,
+      "unique_id": "model.hs_datamodel.stg_sales_directory__sales_directory_monthly",
+      "compiled": true,
+      "compiled_code": "\n\nwith\n\n\n-- Generate a standard sales directory record from the snapshot, casting values\n-- from the `employee_record` field where appropriate.\nsales_directory_monthly_raw as (\n    select\n        primary_key::varchar as primary_key,\n        iff(\n                lower(employee_record:\"Employee\"::varchar) = 'null',\n                null,\n                employee_record:\"Employee\"::varchar\n            ) as employee\n                ,\n            \n        iff(\n                lower(employee_record:\"Time\"::varchar) = 'null',\n                null,\n                employee_record:\"Time\"::varchar\n            ) as time\n                ,\n            \n        iff(\n                lower(employee_record:\"activation_relief\"::varchar) = 'null',\n                null,\n                employee_record:\"activation_relief\"::varchar\n            ) as activation_relief\n                ,\n            \n        iff(\n                lower(employee_record:\"activity_relief\"::varchar) = 'null',\n                null,\n                employee_record:\"activity_relief\"::varchar\n            ) as activity_relief\n                ,\n            \n        iff(\n                lower(employee_record:\"activity_type\"::varchar) = 'null',\n                null,\n                employee_record:\"activity_type\"::varchar\n            ) as activity_type\n                ,\n            \n        iff(\n                lower(employee_record:\"business_title\"::varchar) = 'null',\n                null,\n                employee_record:\"business_title\"::varchar\n            ) as business_title\n                ,\n            \n        iff(\n                lower(employee_record:\"corporate_monthly_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"corporate_monthly_quota\"::varchar\n            ) as corporate_monthly_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"country\"::varchar) = 'null',\n                null,\n                employee_record:\"country\"::varchar\n            ) as country\n                ,\n            \n        iff(\n                lower(employee_record:\"delta_in_multiplier\"::varchar) = 'null',\n                null,\n                employee_record:\"delta_in_multiplier\"::varchar\n            ) as delta_in_multiplier\n                ,\n            \n        iff(\n                lower(employee_record:\"director_name_workday\"::varchar) = 'null',\n                null,\n                employee_record:\"director_name_workday\"::varchar\n            ) as director_name_workday\n                ,\n            \n        iff(\n                lower(employee_record:\"director_workday_employee_id\"::varchar) = 'null',\n                null,\n                employee_record:\"director_workday_employee_id\"::varchar\n            ) as director_workday_employee_id\n                ,\n            \n        iff(\n                lower(employee_record:\"employee_email\"::varchar) = 'null',\n                null,\n                employee_record:\"employee_email\"::varchar\n            ) as employee_email\n                ,\n            \n        iff(\n                lower(employee_record:\"employee_location\"::varchar) = 'null',\n                null,\n                employee_record:\"employee_location\"::varchar\n            ) as employee_location\n                ,\n            \n        iff(\n                lower(employee_record:\"employee_name_workday\"::varchar) = 'null',\n                null,\n                employee_record:\"employee_name_workday\"::varchar\n            ) as employee_name_workday\n                ,\n            \n        iff(\n                lower(employee_record:\"employee_office\"::varchar) = 'null',\n                null,\n                employee_record:\"employee_office\"::varchar\n            ) as employee_office\n                ,\n            \n        iff(\n                lower(employee_record:\"final_month_in_funnel\"::varchar) = 'null',\n                null,\n                employee_record:\"final_month_in_funnel\"::varchar\n            ) as final_month_in_funnel\n                ,\n            \n        iff(\n                lower(employee_record:\"geography\"::varchar) = 'null',\n                null,\n                employee_record:\"geography\"::varchar\n            ) as geography\n                ,\n            \n        iff(\n                lower(employee_record:\"go_to_market_workday_employee_id\"::varchar) = 'null',\n                null,\n                employee_record:\"go_to_market_workday_employee_id\"::varchar\n            ) as go_to_market_workday_employee_id\n                ,\n            \n        iff(\n                lower(employee_record:\"gross_activation_target\"::varchar) = 'null',\n                null,\n                employee_record:\"gross_activation_target\"::varchar\n            ) as gross_activation_target\n                ,\n            \n        iff(\n                lower(employee_record:\"gross_activity_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"gross_activity_quota\"::varchar\n            ) as gross_activity_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"gross_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"gross_quota\"::varchar\n            ) as gross_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"gs_multiplier\"::varchar) = 'null',\n                null,\n                employee_record:\"gs_multiplier\"::varchar\n            ) as gs_multiplier\n                ,\n            \n        iff(\n                lower(employee_record:\"gtm_director_name\"::varchar) = 'null',\n                null,\n                employee_record:\"gtm_director_name\"::varchar\n            ) as gtm_director_name\n                ,\n            \n        iff(\n                lower(employee_record:\"hire_date\"::varchar) = 'null',\n                null,\n                employee_record:\"hire_date\"::varchar\n            ) as hire_date\n                ,\n            \n        iff(\n                lower(employee_record:\"hiring_source\"::varchar) = 'null',\n                null,\n                employee_record:\"hiring_source\"::varchar\n            ) as hiring_source\n                ,\n            \n        iff(\n                lower(employee_record:\"install_base_quota_percent\"::varchar) = 'null',\n                null,\n                employee_record:\"install_base_quota_percent\"::varchar\n            ) as install_base_quota_percent\n                ,\n            \n        iff(\n                lower(employee_record:\"is_active\"::varchar) = 'null',\n                null,\n                employee_record:\"is_active\"::varchar\n            ) as is_active\n                ,\n            \n        iff(\n                lower(employee_record:\"is_active_headcount_tracker\"::varchar) = 'null',\n                null,\n                employee_record:\"is_active_headcount_tracker\"::varchar\n            ) as is_active_headcount_tracker\n                ,\n            \n        iff(\n                lower(employee_record:\"is_finalized\"::varchar) = 'null',\n                null,\n                employee_record:\"is_finalized\"::varchar\n            ) as is_finalized\n                ,\n            \n        iff(\n                lower(employee_record:\"is_no_longer_at_hubspot\"::varchar) = 'null',\n                null,\n                employee_record:\"is_no_longer_at_hubspot\"::varchar\n            ) as is_no_longer_at_hubspot\n                ,\n            \n        iff(\n                lower(employee_record:\"job_profile\"::varchar) = 'null',\n                null,\n                employee_record:\"job_profile\"::varchar\n            ) as job_profile\n                ,\n            \n        iff(\n                lower(employee_record:\"manager_name_workday\"::varchar) = 'null',\n                null,\n                employee_record:\"manager_name_workday\"::varchar\n            ) as manager_name_workday\n                ,\n            \n        iff(\n                lower(employee_record:\"manager_quota_uplift\"::varchar) = 'null',\n                null,\n                employee_record:\"manager_quota_uplift\"::varchar\n            ) as manager_quota_uplift\n                ,\n            \n        iff(\n                lower(employee_record:\"manager_workday_employee_id\"::varchar) = 'null',\n                null,\n                employee_record:\"manager_workday_employee_id\"::varchar\n            ) as manager_workday_employee_id\n                ,\n            \n        iff(\n                lower(employee_record:\"marketing_hub_minimum\"::varchar) = 'null',\n                null,\n                employee_record:\"marketing_hub_minimum\"::varchar\n            ) as marketing_hub_minimum\n                ,\n            \n        iff(\n                lower(employee_record:\"marketing_meetings_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"marketing_meetings_quota\"::varchar\n            ) as marketing_meetings_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"max_activation_target\"::varchar) = 'null',\n                null,\n                employee_record:\"max_activation_target\"::varchar\n            ) as max_activation_target\n                ,\n            \n        iff(\n                lower(employee_record:\"max_activity_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"max_activity_quota\"::varchar\n            ) as max_activity_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"max_gross_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"max_gross_quota\"::varchar\n            ) as max_gross_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"max_meetings_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"max_meetings_quota\"::varchar\n            ) as max_meetings_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"meetings_relief_taken\"::varchar) = 'null',\n                null,\n                employee_record:\"meetings_relief_taken\"::varchar\n            ) as meetings_relief_taken\n                ,\n            \n        iff(\n                lower(employee_record:\"month_in_funnel\"::varchar) = 'null',\n                null,\n                employee_record:\"month_in_funnel\"::varchar\n            ) as month_in_funnel\n                ,\n            \n        iff(\n                lower(employee_record:\"new_hire_early_term_gross_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"new_hire_early_term_gross_quota\"::varchar\n            ) as new_hire_early_term_gross_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"non_gs_multiplier\"::varchar) = 'null',\n                null,\n                employee_record:\"non_gs_multiplier\"::varchar\n            ) as non_gs_multiplier\n                ,\n            \n        iff(\n                lower(employee_record:\"override_summary\"::varchar) = 'null',\n                null,\n                employee_record:\"override_summary\"::varchar\n            ) as override_summary\n                ,\n            \n        iff(\n                lower(employee_record:\"q1_delta_in_multiplier\"::varchar) = 'null',\n                null,\n                employee_record:\"q1_delta_in_multiplier\"::varchar\n            ) as q1_delta_in_multiplier\n                ,\n            \n        iff(\n                lower(employee_record:\"record_count_by_month\"::varchar) = 'null',\n                null,\n                employee_record:\"record_count_by_month\"::varchar\n            ) as record_count_by_month\n                ,\n            \n        iff(\n                lower(employee_record:\"relief_taken\"::varchar) = 'null',\n                null,\n                employee_record:\"relief_taken\"::varchar\n            ) as relief_taken\n                ,\n            \n        iff(\n                lower(employee_record:\"report_month\"::varchar) = 'null',\n                null,\n                employee_record:\"report_month\"::varchar\n            ) as report_month\n                ,\n            \n        iff(\n                lower(employee_record:\"sales_hub_minimum\"::varchar) = 'null',\n                null,\n                employee_record:\"sales_hub_minimum\"::varchar\n            ) as sales_hub_minimum\n                ,\n            \n        iff(\n                lower(employee_record:\"sales_role\"::varchar) = 'null',\n                null,\n                employee_record:\"sales_role\"::varchar\n            ) as sales_role\n                ,\n            \n        iff(\n                lower(employee_record:\"segment\"::varchar) = 'null',\n                null,\n                employee_record:\"segment\"::varchar\n            ) as segment\n                ,\n            \n        iff(\n                lower(employee_record:\"segment_month_in_funnel\"::varchar) = 'null',\n                null,\n                employee_record:\"segment_month_in_funnel\"::varchar\n            ) as segment_month_in_funnel\n                ,\n            \n        iff(\n                lower(employee_record:\"segment_role\"::varchar) = 'null',\n                null,\n                employee_record:\"segment_role\"::varchar\n            ) as segment_role\n                ,\n            \n        iff(\n                lower(employee_record:\"segment_transfer_ramp_percentage\"::varchar) = 'null',\n                null,\n                employee_record:\"segment_transfer_ramp_percentage\"::varchar\n            ) as segment_transfer_ramp_percentage\n                ,\n            \n        iff(\n                lower(employee_record:\"senior_director_name_workday\"::varchar) = 'null',\n                null,\n                employee_record:\"senior_director_name_workday\"::varchar\n            ) as senior_director_name_workday\n                ,\n            \n        iff(\n                lower(employee_record:\"senior_director_workday_employee_id\"::varchar) = 'null',\n                null,\n                employee_record:\"senior_director_workday_employee_id\"::varchar\n            ) as senior_director_workday_employee_id\n                ,\n            \n        iff(\n                lower(employee_record:\"senior_vp_name_workday\"::varchar) = 'null',\n                null,\n                employee_record:\"senior_vp_name_workday\"::varchar\n            ) as senior_vp_name_workday\n                ,\n            \n        iff(\n                lower(employee_record:\"senior_vp_workday_employee_id\"::varchar) = 'null',\n                null,\n                employee_record:\"senior_vp_workday_employee_id\"::varchar\n            ) as senior_vp_workday_employee_id\n                ,\n            \n        iff(\n                lower(employee_record:\"service_hub_minimum\"::varchar) = 'null',\n                null,\n                employee_record:\"service_hub_minimum\"::varchar\n            ) as service_hub_minimum\n                ,\n            \n        iff(\n                lower(employee_record:\"street_activation_target\"::varchar) = 'null',\n                null,\n                employee_record:\"street_activation_target\"::varchar\n            ) as street_activation_target\n                ,\n            \n        iff(\n                lower(employee_record:\"street_activity_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"street_activity_quota\"::varchar\n            ) as street_activity_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"street_meetings_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"street_meetings_quota\"::varchar\n            ) as street_meetings_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"street_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"street_quota\"::varchar\n            ) as street_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"total_meetings_quota\"::varchar) = 'null',\n                null,\n                employee_record:\"total_meetings_quota\"::varchar\n            ) as total_meetings_quota\n                ,\n            \n        iff(\n                lower(employee_record:\"type_of_change\"::varchar) = 'null',\n                null,\n                employee_record:\"type_of_change\"::varchar\n            ) as type_of_change\n                ,\n            \n        iff(\n                lower(employee_record:\"vp_name_workday\"::varchar) = 'null',\n                null,\n                employee_record:\"vp_name_workday\"::varchar\n            ) as vp_name_workday\n                ,\n            \n        iff(\n                lower(employee_record:\"vp_workday_employee_id\"::varchar) = 'null',\n                null,\n                employee_record:\"vp_workday_employee_id\"::varchar\n            ) as vp_workday_employee_id\n                ,\n            \n        iff(\n                lower(employee_record:\"workday_employee_id\"::varchar) = 'null',\n                null,\n                employee_record:\"workday_employee_id\"::varchar\n            ) as workday_employee_id\n        \n    from prod_db.dbt_staging.snp_sales_directory__sales_directory_monthly_raw\n    where\n        (\n            dbt_valid_to is null\n            or is_finalized = true\n        )\n        and report_month >= '2023-07-01'\n\n    -- It's possible to have multiple finalized records. If that happens, fall\n    -- back on the row_number to grab the most recent update of the finalized\n    -- record.\n    qualify\n        row_number() over (\n            partition by primary_key::varchar\n            order by dbt_updated_at desc\n        ) = 1\n),\n\nsales_directory_monthly_mapped as (\n    select\n        date_trunc('month', report_month::date) as report_month,\n        primary_key,\n        workday_employee_id,\n        employee_name_workday,\n        sales_role,\n        job_profile,\n        geography,\n        country,\n        segment,\n        segment_role,\n        try_to_number(month_in_funnel) as month_in_funnel,\n        try_to_number(segment_month_in_funnel) as segment_month_in_funnel,\n        try_to_number(final_month_in_funnel) as final_month_in_funnel,\n        manager_workday_employee_id,\n        manager_name_workday,\n        director_workday_employee_id,\n        director_name_workday,\n        senior_director_workday_employee_id,\n        senior_director_name_workday,\n        vp_workday_employee_id,\n        vp_name_workday,\n        senior_vp_workday_employee_id,\n        senior_vp_name_workday,\n        go_to_market_workday_employee_id,\n        gtm_director_name,\n        try_to_decimal(gross_quota, 38, 2) as gross_quota,\n        try_to_decimal(street_quota, 38, 2) as street_quota,\n        try_to_decimal(relief_taken, 38, 2) as relief_taken,\n        try_to_decimal(install_base_quota_percent, 38, 2) as install_base_quota_percent,\n        try_to_number(total_meetings_quota) as total_meetings_quota,\n        try_to_number(street_meetings_quota) as street_meetings_quota,\n        try_to_number(meetings_relief_taken) as meetings_relief_taken,\n        try_to_number(street_activity_quota) as street_activity_quota,\n        try_to_number(activity_relief) as activity_relief,\n        try_to_number(gross_activity_quota) as gross_activity_quota,\n        activity_type,\n        try_to_number(marketing_meetings_quota) as marketing_meetings_quota,\n        try_to_decimal(delta_in_multiplier, 38, 2) as delta_in_multiplier,\n        try_to_decimal(gs_multiplier, 38, 2) as gs_multiplier,\n        try_to_decimal(non_gs_multiplier, 38, 2) as non_gs_multiplier,\n        try_to_decimal(q1_delta_in_multiplier, 38, 2) as q1_delta_in_multiplier,\n        hiring_source,\n        type_of_change,\n        business_title,\n        employee_office,\n        employee_location,\n        hire_date,\n        split_part(employee_name_workday, ' ', 0) as first_name,\n        split_part(employee_name_workday, ' ', -1) as last_name,\n        try_to_number(corporate_monthly_quota) as corporate_monthly_quota,\n        try_to_number(max_meetings_quota) as max_meetings_quota,\n        try_to_number(max_activity_quota) as max_activity_quota,\n        try_to_number(max_gross_quota) as max_gross_quota,\n        try_to_boolean(is_active_headcount_tracker) as is_active_headcount_tracker,\n        current_timestamp() as row_updated_utc,\n        try_to_number(new_hire_early_term_gross_quota) as new_hire_early_term_gross_quota,\n        try_to_number(street_activation_target) as street_activation_target,\n        try_to_number(activation_relief) as activation_relief,\n        try_to_number(gross_activation_target) as gross_activation_target,\n        try_to_number(max_activation_target) as max_activation_target,\n        try_to_decimal(marketing_hub_minimum, 38, 2) as marketing_hub_minimum,\n        try_to_decimal(sales_hub_minimum, 38, 2) as sales_hub_minimum,\n        try_to_decimal(service_hub_minimum, 38, 2) as service_hub_minimum,\n        try_to_decimal(manager_quota_uplift, 38, 2) as manager_quota_uplift\n    from sales_directory_monthly_raw\n),\n\n\nhistorical_sales_directory as (\n    -- Note: This is a temporary source reference while we verify the\n    -- functionality and stability of this model. At a point in the near future,\n    -- we will make a static version of `fact_tables.sales_directory_history`\n    -- that will be staged in a base model and referenced here.\n    select\n    -- Select most fields, but exclude those which are _ALWAYS_ null.\n        \"REPORT_MONTH\",\n  \"PKEY\",\n  \"WORKDAY_EMPLOYEE_ID\",\n  \"EMPLOYEE_NAME_WORKDAY\",\n  \"SALES_ROLE\",\n  \"JOB_PROFILE\",\n  \"GEOGRAPHY\",\n  \"COUNTRY\",\n  \"SEGMENT\",\n  \"SEGMENT_ROLE\",\n  \"MONTH_IN_FUNNEL\",\n  \"SEGMENT_MONTH_IN_FUNNEL\",\n  \"FINAL_MONTH_IN_FUNNEL\",\n  \"MANAGER_WORKDAY_EMPLOYEE_ID\",\n  \"MANAGER_NAME_WORKDAY\",\n  \"DIRECTOR_WORKDAY_EMPLOYEE_ID\",\n  \"DIRECTOR_NAME_WORKDAY\",\n  \"SENIOR_DIRECTOR_WORKDAY_EMPLOYEE_ID\",\n  \"SENIOR_DIRECTOR_NAME_WORKDAY\",\n  \"VP_WORKDAY_EMPLOYEE_ID\",\n  \"VP_NAME_WORKDAY\",\n  \"SENIOR_VP_WORKDAY_EMPLOYEE_ID\",\n  \"SENIOR_VP_NAME_WORKDAY\",\n  \"GO_TO_MARKET_WORKDAY_EMPLOYEE_ID\",\n  \"GTM_DIRECTOR_NAME\",\n  \"GROSS_QUOTA\",\n  \"STREET_QUOTA\",\n  \"RELIEF_TAKEN\",\n  \"INSTALL_BASE_QUOTA_PERCENT\",\n  \"TOTAL_MEETINGS_QUOTA\",\n  \"STREET_MEETINGS_QUOTA\",\n  \"MEETINGS_RELIEF_TAKEN\",\n  \"STREET_ACTIVITY_QUOTA\",\n  \"ACTIVITY_RELIEF\",\n  \"GROSS_ACTIVITY_QUOTA\",\n  \"ACTIVITY_TYPE\",\n  \"MARKETING_MEETINGS_QUOTA\",\n  \"DELTA_IN_MULTIPLIER\",\n  \"GS_MULTIPLIER\",\n  \"NON_GS_MULTIPLIER\",\n  \"Q1_DELTA_IN_MULTIPLIER\",\n  \"HIRING_SOURCE\",\n  \"TYPE_OF_CHANGE\",\n  \"BUSINESS_TITLE\",\n  \"EMPLOYEE_OFFICE\",\n  \"EMPLOYEE_LOCATION\",\n  \"HIRE_DATE\",\n  \"FIRST_NAME\",\n  \"LAST_NAME\",\n  \"CORPORATE_MONTHLY_QUOTA\",\n  \"MAX_MEETINGS_QUOTA\",\n  \"MAX_ACTIVITY_QUOTA\",\n  \"MAX_GROSS_QUOTA\",\n  \"IS_ACTIVE_HEADCOUNT_TRACKER\",\n  \"ROW_UPDATED_UTC\",\n        null as new_hire_early_term_gross_quota,\n        null as street_activation_target,\n        null as activation_relief,\n        null as gross_activation_target,\n        null as max_activation_target,\n        null as marketing_hub_minimum,\n        null as sales_hub_minimum,\n        null as service_hub_minimum,\n        null as manager_quota_uplift\n    from prod_db.dbt_staging.base_team_gtm_core_static__sales_directory_history_2023_08\n    where report_month < '2023-07-01'\n),\n\nsales_directory_unioned as (\n    select * from sales_directory_monthly_mapped\n    union all\n    select * from historical_sales_directory\n),\n\n-- Get latest from override\nsales_directory_override_raw as (\n    select\n        primary_key::varchar as primary_key,\n        iff(\n                lower(employee_record:\"Historical Overrides\"::varchar) = 'null',\n                null,\n                employee_record:\"Historical Overrides\"::varchar\n            ) as historical_overrides\n                ,\n            \n        iff(\n                lower(employee_record:\"activation_relief_override\"::varchar) = 'null',\n                null,\n                employee_record:\"activation_relief_override\"::varchar\n            ) as activation_relief_override\n                ,\n            \n        iff(\n                lower(employee_record:\"activity_relief_override\"::varchar) = 'null',\n                null,\n                employee_record:\"activity_relief_override\"::varchar\n            ) as activity_relief_override\n                ,\n            \n        iff(\n                lower(employee_record:\"country_override\"::varchar) = 'null',\n                null,\n                employee_record:\"country_override\"::varchar\n            ) as country_override\n                ,\n            \n        iff(\n                lower(employee_record:\"employee_id\"::varchar) = 'null',\n                null,\n                employee_record:\"employee_id\"::varchar\n            ) as employee_id\n                ,\n            \n        iff(\n                lower(employee_record:\"geo_override\"::varchar) = 'null',\n                null,\n                employee_record:\"geo_override\"::varchar\n            ) as geo_override\n                ,\n            \n        iff(\n                lower(employee_record:\"gross_activation_override\"::varchar) = 'null',\n                null,\n                employee_record:\"gross_activation_override\"::varchar\n            ) as gross_activation_override\n                ,\n            \n        iff(\n                lower(employee_record:\"gross_activity_override\"::varchar) = 'null',\n                null,\n                employee_record:\"gross_activity_override\"::varchar\n            ) as gross_activity_override\n                ,\n            \n        iff(\n                lower(employee_record:\"gross_meetings_quota_override\"::varchar) = 'null',\n                null,\n                employee_record:\"gross_meetings_quota_override\"::varchar\n            ) as gross_meetings_quota_override\n                ,\n            \n        iff(\n                lower(employee_record:\"gross_quota_override\"::varchar) = 'null',\n                null,\n                employee_record:\"gross_quota_override\"::varchar\n            ) as gross_quota_override\n                ,\n            \n        iff(\n                lower(employee_record:\"is_active_override\"::varchar) = 'null',\n                null,\n                employee_record:\"is_active_override\"::varchar\n            ) as is_active_override\n                ,\n            \n        iff(\n                lower(employee_record:\"job_profile_override\"::varchar) = 'null',\n                null,\n                employee_record:\"job_profile_override\"::varchar\n            ) as job_profile_override\n                ,\n            \n        iff(\n                lower(employee_record:\"meeting_relief_override\"::varchar) = 'null',\n                null,\n                employee_record:\"meeting_relief_override\"::varchar\n            ) as meeting_relief_override\n                ,\n            \n        iff(\n                lower(employee_record:\"mif_final_override\"::varchar) = 'null',\n                null,\n                employee_record:\"mif_final_override\"::varchar\n            ) as mif_final_override\n                ,\n            \n        iff(\n                lower(employee_record:\"mif_override\"::varchar) = 'null',\n                null,\n                employee_record:\"mif_override\"::varchar\n            ) as mif_override\n                ,\n            \n        iff(\n                lower(employee_record:\"override_month\"::varchar) = 'null',\n                null,\n                employee_record:\"override_month\"::varchar\n            ) as override_month\n                ,\n            \n        iff(\n                lower(employee_record:\"override_submission_date\"::varchar) = 'null',\n                null,\n                employee_record:\"override_submission_date\"::varchar\n            ) as override_submission_date\n                ,\n            \n        iff(\n                lower(employee_record:\"override_summary\"::varchar) = 'null',\n                null,\n                employee_record:\"override_summary\"::varchar\n            ) as override_summary\n                ,\n            \n        iff(\n                lower(employee_record:\"override_user\"::varchar) = 'null',\n                null,\n                employee_record:\"override_user\"::varchar\n            ) as override_user\n                ,\n            \n        iff(\n                lower(employee_record:\"quota_relief_override\"::varchar) = 'null',\n                null,\n                employee_record:\"quota_relief_override\"::varchar\n            ) as quota_relief_override\n                ,\n            \n        iff(\n                lower(employee_record:\"record_count_by_month\"::varchar) = 'null',\n                null,\n                employee_record:\"record_count_by_month\"::varchar\n            ) as record_count_by_month\n                ,\n            \n        iff(\n                lower(employee_record:\"sales_role_override\"::varchar) = 'null',\n                null,\n                employee_record:\"sales_role_override\"::varchar\n            ) as sales_role_override\n                ,\n            \n        iff(\n                lower(employee_record:\"segment_override\"::varchar) = 'null',\n                null,\n                employee_record:\"segment_override\"::varchar\n            ) as segment_override\n                ,\n            \n        iff(\n                lower(employee_record:\"segment_role_override\"::varchar) = 'null',\n                null,\n                employee_record:\"segment_role_override\"::varchar\n            ) as segment_role_override\n                ,\n            \n        iff(\n                lower(employee_record:\"smif_override\"::varchar) = 'null',\n                null,\n                employee_record:\"smif_override\"::varchar\n            ) as smif_override\n                ,\n            \n        iff(\n                lower(employee_record:\"street_activation_override\"::varchar) = 'null',\n                null,\n                employee_record:\"street_activation_override\"::varchar\n            ) as street_activation_override\n                ,\n            \n        iff(\n                lower(employee_record:\"street_activity_override\"::varchar) = 'null',\n                null,\n                employee_record:\"street_activity_override\"::varchar\n            ) as street_activity_override\n                ,\n            \n        iff(\n                lower(employee_record:\"street_meetings_quota_override\"::varchar) = 'null',\n                null,\n                employee_record:\"street_meetings_quota_override\"::varchar\n            ) as street_meetings_quota_override\n                ,\n            \n        iff(\n                lower(employee_record:\"street_quota_override\"::varchar) = 'null',\n                null,\n                employee_record:\"street_quota_override\"::varchar\n            ) as street_quota_override\n                ,\n            \n        iff(\n                lower(employee_record:\"type_of_change_override\"::varchar) = 'null',\n                null,\n                employee_record:\"type_of_change_override\"::varchar\n            ) as type_of_change_override\n        \n    from prod_db.dbt_staging.snp_sales_directory__sales_directory_override_raw\n    where dbt_valid_to is null\n),\n\nsales_directory_override_mapped as (\n    select\n        primary_key,\n        override_month,\n        override_submission_date,\n        override_summary,\n        override_user,\n        employee_id as workday_employee_id,\n        historical_overrides,\n        country_override,\n        geo_override as geography_override,\n        job_profile_override,\n        sales_role_override,\n        segment_override,\n        segment_role_override,\n        type_of_change_override,\n        try_to_number(record_count_by_month) as record_count_by_month,\n        try_to_number(activity_relief_override) as activity_relief_override,\n        try_to_number(gross_activity_override) as gross_activity_quota_override,\n        try_to_number(gross_meetings_quota_override) as total_meetings_quota_override,\n        try_to_decimal(gross_quota_override, 38, 2) as gross_quota_override,\n        try_to_boolean(is_active_override) as is_active_override,\n        try_to_number(meeting_relief_override) as meetings_relief_taken_override,\n        try_to_number(mif_final_override) as final_month_in_funnel_override,\n        try_to_number(mif_override) as month_in_funnel_override,\n        try_to_decimal(quota_relief_override, 38, 2) as relief_taken_override,\n        try_to_number(smif_override) as segment_month_in_funnel_override,\n        try_to_number(street_activity_override) as street_activity_quota_override,\n        try_to_number(street_meetings_quota_override) as street_meetings_quota_override,\n        try_to_decimal(street_quota_override, 38, 2) as street_quota_override,\n        try_to_decimal(gross_activation_override, 38, 2) as gross_activation_override,\n        try_to_decimal(street_activation_override, 38, 2) as street_activation_override,\n        try_to_decimal(activation_relief_override, 38, 2) as activation_relief_override\n\n\n    from sales_directory_override_raw\n),\n\n-- Add historic Partner ACtivation Targets that existed prior to uploads to Anaplan\nhistorical_partner_activation_targets as (\n    select\n        *\n    from prod_db.team_gtm_core.seed_sales_directory_historical_partner_activation_targets\n),\n\nfinal as (\n    select\n        sales_directory_unioned.report_month,\n        sales_directory_unioned.primary_key as pkey,\n        sales_directory_unioned.workday_employee_id,\n        sales_directory_unioned.employee_name_workday,\n\n        coalesce(\n            sales_directory_override_mapped.sales_role_override,\n            sales_directory_unioned.sales_role\n        ) as sales_role,\n\n         coalesce(\n            sales_directory_override_mapped.job_profile_override,\n            sales_directory_unioned.job_profile\n        ) as job_profile,\n\n        coalesce(\n            sales_directory_override_mapped.geography_override,\n            sales_directory_unioned.geography\n        ) as geography,\n\n        coalesce(\n            sales_directory_override_mapped.country_override,\n            sales_directory_unioned.country\n        ) as country,\n\n        coalesce(\n            sales_directory_override_mapped.segment_override,\n            sales_directory_unioned.segment\n        ) as segment,\n\n        coalesce(\n            sales_directory_override_mapped.segment_role_override,\n            sales_directory_unioned.segment_role\n        ) as segment_role,\n\n\n        coalesce(\n            sales_directory_override_mapped.month_in_funnel_override,\n            sales_directory_unioned.month_in_funnel\n        ) as month_in_funnel,\n\n        coalesce(\n            sales_directory_override_mapped.segment_month_in_funnel_override,\n            sales_directory_unioned.segment_month_in_funnel\n        ) as segment_month_in_funnel,\n\n        coalesce(\n            sales_directory_override_mapped.final_month_in_funnel_override,\n            sales_directory_unioned.final_month_in_funnel\n        ) as final_month_in_funnel,\n\n        sales_directory_unioned.manager_workday_employee_id,\n        sales_directory_unioned.manager_name_workday,\n        sales_directory_unioned.director_workday_employee_id,\n        sales_directory_unioned.director_name_workday,\n        sales_directory_unioned.senior_director_workday_employee_id,\n        sales_directory_unioned.senior_director_name_workday,\n        sales_directory_unioned.vp_workday_employee_id,\n        sales_directory_unioned.vp_name_workday,\n        sales_directory_unioned.senior_vp_workday_employee_id,\n        sales_directory_unioned.senior_vp_name_workday,\n        sales_directory_unioned.go_to_market_workday_employee_id,\n        sales_directory_unioned.gtm_director_name,\n\n        coalesce(\n            sales_directory_override_mapped.gross_quota_override,\n            sales_directory_unioned.gross_quota\n        ) as gross_quota,\n\n        coalesce(\n            sales_directory_override_mapped.street_quota_override,\n            sales_directory_unioned.street_quota\n        ) as street_quota,\n\n        coalesce(\n            sales_directory_override_mapped.relief_taken_override,\n            sales_directory_unioned.relief_taken\n        ) as relief_taken,\n\n        sales_directory_unioned.install_base_quota_percent,\n\n        coalesce(\n            sales_directory_override_mapped.total_meetings_quota_override,\n            sales_directory_unioned.total_meetings_quota\n        ) as total_meetings_quota,\n\n        coalesce(\n            sales_directory_override_mapped.street_meetings_quota_override,\n            sales_directory_unioned.street_meetings_quota\n        ) as street_meetings_quota,\n\n        coalesce(\n            sales_directory_override_mapped.meetings_relief_taken_override,\n            sales_directory_unioned.meetings_relief_taken\n        ) as meetings_relief_taken,\n\n        coalesce(\n            sales_directory_override_mapped.street_activity_quota_override,\n            sales_directory_unioned.street_activity_quota\n        ) as street_activity_quota,\n\n        coalesce(\n            sales_directory_override_mapped.activity_relief_override,\n            sales_directory_unioned.activity_relief\n        ) as activity_relief,\n\n        coalesce(\n            sales_directory_override_mapped.gross_activity_quota_override,\n            sales_directory_unioned.gross_activity_quota\n        ) as gross_activity_quota,\n\n        sales_directory_unioned.activity_type,\n        sales_directory_unioned.marketing_meetings_quota,\n        sales_directory_unioned.delta_in_multiplier,\n        sales_directory_unioned.gs_multiplier,\n        sales_directory_unioned.non_gs_multiplier,\n        sales_directory_unioned.q1_delta_in_multiplier,\n        sales_directory_unioned.hiring_source,\n        sales_directory_unioned.type_of_change,\n        sales_directory_unioned.business_title,\n        sales_directory_unioned.employee_office,\n        sales_directory_unioned.employee_location,\n        sales_directory_unioned.hire_date,\n        sales_directory_unioned.first_name,\n        sales_directory_unioned.last_name,\n        sales_directory_unioned.corporate_monthly_quota,\n        sales_directory_unioned.max_meetings_quota,\n        sales_directory_unioned.max_activity_quota,\n        sales_directory_unioned.max_gross_quota,\n        sales_directory_unioned.is_active_headcount_tracker,\n        sales_directory_unioned.new_hire_early_term_gross_quota,\n\n        coalesce(\n            historic_activation.street_activation_target,\n            sales_directory_override_mapped.street_activation_override,\n            sales_directory_unioned.street_activation_target\n        ) as street_activation_target,\n\n        coalesce(\n            historic_activation.activation_relief,\n            sales_directory_override_mapped.activation_relief_override,\n            sales_directory_unioned.activation_relief\n        ) as activation_relief,\n\n        coalesce(\n            historic_activation.gross_activation_target,\n            sales_directory_override_mapped.gross_activation_override,\n            sales_directory_unioned.gross_activation_target\n        ) as gross_activation_target,\n\n        coalesce(\n            historic_activation.max_activation_target,\n            sales_directory_unioned.max_activation_target\n        ) as max_activation_target,\n\n        sales_directory_unioned.marketing_hub_minimum,\n        sales_directory_unioned.sales_hub_minimum,\n        sales_directory_unioned.service_hub_minimum,\n        sales_directory_unioned.manager_quota_uplift,\n        sales_directory_unioned.row_updated_utc\n    from sales_directory_unioned\n    left join sales_directory_override_mapped on\n        sales_directory_unioned.primary_key = sales_directory_override_mapped.primary_key\n        \n    left join\n        historical_partner_activation_targets as historic_activation on\n        sales_directory_unioned.workday_employee_id = historic_activation.workday_employee_id\n        and sales_directory_unioned.report_month = historic_activation.report_month\n\n)\n\nselect * from final",
+      "relation_name": "prod_db.dbt_staging.stg_sales_directory__sales_directory_monthly"
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:09.068642Z",
+          "completed_at": "2024-02-09T07:32:09.089097Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:09.092178Z",
+          "completed_at": "2024-02-09T07:32:09.571462Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.5666420459747314,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906df23b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__sales_directory_monthly_pkey.b43f5c3223",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect pkey\nfrom prod_db.dbt_staging.stg_sales_directory__sales_directory_monthly\nwhere pkey is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:09.083993Z",
+          "completed_at": "2024-02-09T07:32:09.095674Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:09.106329Z",
+          "completed_at": "2024-02-09T07:32:09.782876Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.7579469680786133,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906df237"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__sales_directory_monthly_workday_employee_id.bc59fbd067",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect workday_employee_id\nfrom prod_db.dbt_staging.stg_sales_directory__sales_directory_monthly\nwhere workday_employee_id is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:09.074526Z",
+          "completed_at": "2024-02-09T07:32:09.090990Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:09.098496Z",
+          "completed_at": "2024-02-09T07:32:09.802404Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.7813773155212402,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906df23f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_stg_sales_directory__sales_directory_monthly_report_month.f730f7a6f5",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect report_month\nfrom prod_db.dbt_staging.stg_sales_directory__sales_directory_monthly\nwhere report_month is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:09.634378Z",
+          "completed_at": "2024-02-09T07:32:09.640989Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:09.642294Z",
+          "completed_at": "2024-02-09T07:32:10.294785Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.7028622627258301,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e85-0001-6902906def63"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.unique_stg_sales_directory__sales_directory_monthly_pkey.77deea5701",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nselect\n    pkey as unique_field,\n    count(*) as n_records\n\nfrom prod_db.dbt_staging.stg_sales_directory__sales_directory_monthly\nwhere pkey is not null\ngroup by pkey\nhaving count(*) > 1\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:31:31.516255Z",
+          "completed_at": "2024-02-09T07:31:31.516260Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:31:31.538674Z",
+          "completed_at": "2024-02-09T07:32:49.723035Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 78.27465415000916,
+      "adapter_response": {
+        "_message": "INSERT 101155",
+        "code": "INSERT",
+        "rows_affected": 101155
+      },
+      "message": "INSERT 101155",
+      "failures": null,
+      "unique_id": "seed.hs_datamodel.seed_sales_directory_time_to_ramp_quotas_anaplan_historicals_202203_to_202308",
+      "compiled": null,
+      "compiled_code": null,
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:32:49.771353Z",
+          "completed_at": "2024-02-09T07:32:50.025498Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:32:50.026793Z",
+          "completed_at": "2024-02-09T07:33:05.107037Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 15.376762628555298,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b04-0609-0e86-0001-6902906dffd3"
+      },
+      "message": "SUCCESS 1",
+      "failures": null,
+      "unique_id": "model.hs_datamodel.int_sales_directory__employees_joined",
+      "compiled": true,
+      "compiled_code": "\n\nwith\n\nemployees as (\n    select\n        *,\n        decode(\n            job_profile,\n            'BDR - Contractor', 'BDR',\n            null\n        ) as contractor_sales_role\n    from prod_db.dbt_intermediate.int_employees__end_of_month_enriched\n),\n\nrep_historical_headcount as (\n    select anaplan_sales_directory_key\n    from prod_db.team_gtm_core.seed_sales_directory_rep_historical_headcount\n),\n\nstandardized_country_mapping as (\n    select *\n    from prod_db.team_gtm_core.seed_map_country_to_geo\n    where source = 'sales_directory'\n),\n\nstandardized_segment_mapping as (\n    select *\n    from prod_db.team_gtm_core.seed_map_to_unified_sales_segment\n    where source = 'sales_directory'\n),\n\nhistoricals_202102_to_202202 as (\n    select\n        geography,\n        country,\n        segment,\n        job_profile,\n        segment_role,\n        type_of_hire as type_of_change,\n        month_in_funnel,\n        full_quota as max_quota,\n        quota_with_ramp,\n        is_ramped,\n        quota_effective as report_month_start,\n        case\n            when report_month_start = '2021-02-01' then '2021-08-31'\n            when report_month_start = '2021-09-01' then '2022-02-28'\n        end as report_month_end\n    from prod_db.team_gtm_core.seed_sales_directory_time_to_ramp_quotas_preanaplan_historical_202102_to_202202\n),\n\nhistoricals_202203_to_202308 as (\n    select\n        quota_country as country,\n        quota_job_profile_level as job_level,\n        quota_segment as segment,\n        quota_segment_role as segment_role,\n        quota_mif as month_in_funnel,\n        (report_month||'-01')::date as report_month_start,\n        is_ramped,\n        max_quota\n    from prod_db.team_gtm_core.seed_sales_directory_time_to_ramp_quotas_anaplan_historicals_202203_to_202308\n),\n\nsales_directory as (\n    select\n        sales_directory.pkey as anaplan_sales_directory_key,\n        \"WORKDAY_EMPLOYEE_ID\",\n  \"EMPLOYEE_NAME_WORKDAY\",\n  \"SALES_ROLE\",\n  \"JOB_PROFILE\",\n  \"GEOGRAPHY\",\n  \"COUNTRY\",\n  \"SEGMENT\",\n  \"SEGMENT_ROLE\",\n  \"MONTH_IN_FUNNEL\",\n  \"SEGMENT_MONTH_IN_FUNNEL\",\n  \"FINAL_MONTH_IN_FUNNEL\",\n  \"MANAGER_WORKDAY_EMPLOYEE_ID\",\n  \"MANAGER_NAME_WORKDAY\",\n  \"DIRECTOR_WORKDAY_EMPLOYEE_ID\",\n  \"SENIOR_DIRECTOR_WORKDAY_EMPLOYEE_ID\",\n  \"VP_WORKDAY_EMPLOYEE_ID\",\n  \"SENIOR_VP_WORKDAY_EMPLOYEE_ID\",\n  \"GO_TO_MARKET_WORKDAY_EMPLOYEE_ID\",\n  \"GTM_DIRECTOR_NAME\",\n  \"GROSS_QUOTA\",\n  \"STREET_QUOTA\",\n  \"RELIEF_TAKEN\",\n  \"INSTALL_BASE_QUOTA_PERCENT\",\n  \"TOTAL_MEETINGS_QUOTA\",\n  \"STREET_MEETINGS_QUOTA\",\n  \"MEETINGS_RELIEF_TAKEN\",\n  \"STREET_ACTIVITY_QUOTA\",\n  \"ACTIVITY_RELIEF\",\n  \"GROSS_ACTIVITY_QUOTA\",\n  \"ACTIVITY_TYPE\",\n  \"MARKETING_MEETINGS_QUOTA\",\n  \"DELTA_IN_MULTIPLIER\",\n  \"GS_MULTIPLIER\",\n  \"NON_GS_MULTIPLIER\",\n  \"Q1_DELTA_IN_MULTIPLIER\",\n  \"HIRING_SOURCE\",\n  \"TYPE_OF_CHANGE\",\n  \"BUSINESS_TITLE\",\n  \"EMPLOYEE_OFFICE\",\n  \"EMPLOYEE_LOCATION\",\n  \"HIRE_DATE\",\n  \"FIRST_NAME\",\n  \"LAST_NAME\",\n  \"CORPORATE_MONTHLY_QUOTA\",\n  \"MAX_MEETINGS_QUOTA\",\n  \"MAX_ACTIVITY_QUOTA\",\n  \"MAX_GROSS_QUOTA\",\n  \"NEW_HIRE_EARLY_TERM_GROSS_QUOTA\",\n  \"STREET_ACTIVATION_TARGET\",\n  \"ACTIVATION_RELIEF\",\n  \"GROSS_ACTIVATION_TARGET\",\n  \"MAX_ACTIVATION_TARGET\",\n  \"MARKETING_HUB_MINIMUM\",\n  \"SALES_HUB_MINIMUM\",\n  \"SERVICE_HUB_MINIMUM\",\n  \"MANAGER_QUOTA_UPLIFT\",\n  \"ROW_UPDATED_UTC\",\n        sales_directory.report_month::date as report_month,\n        sales_directory.director_name_workday as director_name,\n        sales_directory.senior_director_name_workday as senior_director_name,\n        sales_directory.vp_name_workday as vp_name,\n        sales_directory.senior_vp_name_workday as senior_vp_name,\n        split_part(sales_directory.job_profile, ' ', -1) as job_level,\n        case\n            when sales_directory.type_of_change = 'New - Internal (HubSpot)'\n                then 'New - External'\n            else\n                sales_directory.type_of_change\n        end as type_of_change_historical_join,\n        coalesce(\n            sales_directory.is_active_headcount_tracker,\n            rep_historical_headcount.anaplan_sales_directory_key is not null\n        ) as is_active_headcount_tracker\n\n    from prod_db.dbt_staging.stg_sales_directory__sales_directory_monthly as sales_directory\n    left join rep_historical_headcount on\n        sales_directory.pkey = rep_historical_headcount.anaplan_sales_directory_key\n\n),\n\nsales_directory_role_overrides as (\n    select * from prod_db.team_gtm_core.seed_sales_directory_role_overrides\n),\n\n\nhistoricals_with_mapping_2021_2022 as (\n    select\n        sales_directory.anaplan_sales_directory_key as sales_directory_key,\n        historicals_202102_to_202202.max_quota,\n        historicals_202102_to_202202.is_ramped\n    from sales_directory\n    inner join\n        historicals_202102_to_202202 on\n        sales_directory.report_month >= historicals_202102_to_202202.report_month_start\n        and sales_directory.report_month < historicals_202102_to_202202.report_month_end\n        and sales_directory.geography = historicals_202102_to_202202.geography\n        and sales_directory.country = historicals_202102_to_202202.country\n        and sales_directory.segment = historicals_202102_to_202202.segment\n        and sales_directory.job_profile = historicals_202102_to_202202.job_profile\n        and sales_directory.segment_role = historicals_202102_to_202202.segment_role\n        and sales_directory.type_of_change_historical_join = historicals_202102_to_202202.type_of_change\n        and sales_directory.month_in_funnel = historicals_202102_to_202202.month_in_funnel\n\n    where sales_directory.report_month >='2021-02-01'\n        and sales_directory.report_month < '2022-02-28'\n),\n\nhistoricals_with_mapping_2022_2023 as (\n    select\n        sales_directory.anaplan_sales_directory_key as sales_directory_key,\n        historicals_202203_to_202308.max_quota,\n        historicals_202203_to_202308.is_ramped\n    from sales_directory\n    inner join\n        historicals_202203_to_202308 on\n        sales_directory.report_month = historicals_202203_to_202308.report_month_start\n        and sales_directory.country = historicals_202203_to_202308.country\n        and sales_directory.segment = historicals_202203_to_202308.segment\n        and sales_directory.job_level = historicals_202203_to_202308.job_level\n        and sales_directory.segment_role = historicals_202203_to_202308.segment_role\n        and sales_directory.month_in_funnel = historicals_202203_to_202308.month_in_funnel\n\n    where sales_directory.report_month between '2022-03-01' and '2023-08-31'\n),\n\nhistorical_max_quotas as (\n    select\n        *,\n        'Pre-Anaplan Seed' as historical_mapping_category\n    from historicals_with_mapping_2021_2022\n\n    union all\n\n    select\n        *,\n        'Anaplan Seed' as historical_mapping_category\n    from historicals_with_mapping_2022_2023\n),\n\n\nemployees_joined as (\n    select\n\n        employees.workday_employee_id || '-'\n        || employees.report_month || '-'\n        || coalesce(\n            sales_directory_role_overrides.sales_role,\n            sales_directory.sales_role,\n            employees.contractor_sales_role,\n            ''\n        ) as sales_directory_key,\n\n        -- Employee-centric fields\n        employees.report_month::date as report_month,\n        employees.workday_employee_id,\n        employees.p53_owner_id,\n        employees.hubspotter_id,\n        coalesce(\n            sales_directory.employee_name_workday,\n            employees.legal_full_name\n        ) as legal_full_name,\n        employees.preferred_full_name,\n        employees.email,\n        employees.hire_date,\n        employees.employee_last_date as termination_date,\n\n        coalesce(\n            sales_directory.employee_location,\n            employees.employee_location\n        ) as employee_location,\n        employees.carve_location,\n\n        coalesce(\n            sales_directory.job_profile,\n            employees.job_profile\n        ) as job_profile,\n\n        employees.is_contractor,\n        employees.cost_center,\n        employees.cost_center_id,\n        employees.job_family,\n\n        coalesce(\n            sales_directory.manager_workday_employee_id,\n            employees.l1_manager_workday_employee_id\n        ) as manager_workday_employee_id,\n\n        coalesce(\n            sales_directory.manager_name_workday, employees.l1_manager\n        ) as manager_name,\n\n        employees.is_mstd_eligible,\n\n        -- Sales-specific fields\n        sales_directory.anaplan_sales_directory_key is not null\n        as is_in_anaplan_sales_directory,\n\n        sales_directory.anaplan_sales_directory_key,\n\n        sales_directory.employee_office,\n        sales_directory.business_title,\n\n        /*\n        Override sales_directory sales_roles if the employee has been\n        given a manual override in the `sales_directory_role_overrides\n        seed. This is a temporary measure until Workday has been updated\n        to correctly reflect the job profiles for contractor BDRs.\n        */\n        coalesce(\n            sales_directory_role_overrides.sales_role,\n            sales_directory.sales_role,\n            employees.contractor_sales_role\n        ) as sales_role,\n\n        /*\n        Within Anaplan, users with sufficient access can manually override\n        _any_ field. This means that Anaplan can be modified  to purposefully\n        include or exclude users from different reporting segments.\n\n        With this in mind, the geography, country, segment, and segment_role\n        fields always defer to the record's corresponding Anaplan Sales\n        Directory entry if said entry exists. This holds true even if that\n        entry has null value for our fields of interest.\n        */\n        trim(\n            iff(\n                sales_directory.anaplan_sales_directory_key is not null,\n                sales_directory.geography,\n                employees.geography\n            )\n        ) as geography,\n        trim(\n            iff(\n                sales_directory.anaplan_sales_directory_key is not null,\n                sales_directory.country,\n                employees.country\n            )\n        ) as country,\n\n        trim(\n            iff(\n                (\n                    sales_directory_role_overrides.workday_employee_id is not null\n                    or employees.contractor_sales_role is not null\n                )\n                and sales_directory.segment is null,\n                employees.segment,\n                sales_directory.segment\n            )\n        ) as segment,\n        trim(employees.segment) as workday_segment,\n\n        iff(\n            sales_directory.anaplan_sales_directory_key is not null,\n            sales_directory.segment_role,\n            employees.segment_role\n        ) as segment_role,\n\n        sales_directory.month_in_funnel,\n        sales_directory.segment_month_in_funnel,\n        sales_directory.final_month_in_funnel,\n        sales_directory.director_workday_employee_id,\n        sales_directory.director_name,\n        sales_directory.senior_director_workday_employee_id,\n        sales_directory.senior_director_name,\n        sales_directory.vp_workday_employee_id,\n        sales_directory.vp_name,\n        sales_directory.senior_vp_workday_employee_id,\n        sales_directory.senior_vp_name,\n        sales_directory.go_to_market_workday_employee_id,\n        sales_directory.gtm_director_name,\n        sales_directory.gross_quota,\n        sales_directory.street_quota,\n        sales_directory.relief_taken,\n        sales_directory.install_base_quota_percent,\n        sales_directory.total_meetings_quota,\n        sales_directory.street_meetings_quota,\n        sales_directory.meetings_relief_taken,\n        sales_directory.street_activity_quota,\n        sales_directory.activity_relief,\n        sales_directory.gross_activity_quota,\n        sales_directory.activity_type,\n        sales_directory.marketing_meetings_quota,\n        sales_directory.delta_in_multiplier,\n        sales_directory.gs_multiplier,\n        sales_directory.non_gs_multiplier,\n        sales_directory.q1_delta_in_multiplier,\n        sales_directory.hiring_source,\n        sales_directory.type_of_change,\n        sales_directory.corporate_monthly_quota,\n        sales_directory.max_meetings_quota,\n        sales_directory.max_activity_quota,\n        sales_directory.max_gross_quota,\n        sales_directory.is_active_headcount_tracker,\n        sales_directory.new_hire_early_term_gross_quota,\n        sales_directory.street_activation_target,\n        sales_directory.activation_relief,\n        sales_directory.gross_activation_target,\n        sales_directory.max_activation_target,\n        sales_directory.marketing_hub_minimum,\n        sales_directory.sales_hub_minimum,\n        sales_directory.service_hub_minimum,\n        sales_directory.manager_quota_uplift\n\n    from employees\n\n    /*\n    Since the Anaplan sales directory is at the month x employee x role grain,\n    but the employees source is only at the month x employee grain, if an\n    employee has two roles in a given Anaplan Sales Directory month, the same\n    employee information will be reflected for both rows. This is intended.\n    */\n\n    left join\n        sales_directory on\n        employees.workday_employee_id = sales_directory.workday_employee_id\n        and employees.report_month = sales_directory.report_month\n\n    left join\n        sales_directory_role_overrides on\n        employees.workday_employee_id = sales_directory_role_overrides.workday_employee_id\n        and employees.report_month >= date_trunc('month', sales_directory_role_overrides.valid_from)\n        and (\n            sales_directory_role_overrides.valid_to is null\n            or employees.report_month <= date_trunc('month', sales_directory_role_overrides.valid_to)\n        )\n),\n\nemployees_unioned as (\n    select * from employees_joined\n\n    union all\n\n    select\n\n        sales_directory.anaplan_sales_directory_key as sales_directory_key,\n        sales_directory.report_month::date  as report_month,\n        sales_directory.workday_employee_id,\n        null as p53_owner_id,\n        null as hubspotter_id,\n        sales_directory.employee_name_workday as legal_full_name,\n        legal_full_name as preferred_full_name,\n        null as email,\n        sales_directory.hire_date,\n        null as termination_date,\n        sales_directory.employee_location,\n        null as carve_location,\n        sales_directory.job_profile,\n        left(sales_directory.workday_employee_id, 1) = 'C' as is_contractor,\n        null as cost_center,\n        null as cost_center_id,\n        null as job_family,\n        sales_directory.manager_workday_employee_id,\n        sales_directory.manager_name_workday as manager_name,\n        null as is_mstd_eligible,\n        true as is_in_anaplan_sales_directory,\n        sales_directory.anaplan_sales_directory_key,\n        sales_directory.employee_office,\n        sales_directory.business_title,\n        sales_directory.sales_role,\n        sales_directory.geography,\n        sales_directory.country,\n        sales_directory.segment,\n        sales_directory.segment as workday_segment,\n        sales_directory.segment_role,\n        sales_directory.month_in_funnel,\n        sales_directory.segment_month_in_funnel,\n        sales_directory.final_month_in_funnel,\n        sales_directory.director_workday_employee_id,\n        sales_directory.director_name,\n        sales_directory.senior_director_workday_employee_id,\n        sales_directory.senior_director_name,\n        sales_directory.vp_workday_employee_id,\n        sales_directory.vp_name,\n        sales_directory.senior_vp_workday_employee_id,\n        sales_directory.senior_vp_name,\n        sales_directory.go_to_market_workday_employee_id,\n        sales_directory.gtm_director_name,\n        sales_directory.gross_quota,\n        sales_directory.street_quota,\n        sales_directory.relief_taken,\n        sales_directory.install_base_quota_percent,\n        sales_directory.total_meetings_quota,\n        sales_directory.street_meetings_quota,\n        sales_directory.meetings_relief_taken,\n        sales_directory.street_activity_quota,\n        sales_directory.activity_relief,\n        sales_directory.gross_activity_quota,\n        sales_directory.activity_type,\n        sales_directory.marketing_meetings_quota,\n        sales_directory.delta_in_multiplier,\n        sales_directory.gs_multiplier,\n        sales_directory.non_gs_multiplier,\n        sales_directory.q1_delta_in_multiplier,\n        sales_directory.hiring_source,\n        sales_directory.type_of_change,\n        sales_directory.corporate_monthly_quota,\n        sales_directory.max_meetings_quota,\n        sales_directory.max_activity_quota,\n        sales_directory.max_gross_quota,\n        sales_directory.is_active_headcount_tracker,\n        sales_directory.new_hire_early_term_gross_quota,\n        sales_directory.street_activation_target,\n        sales_directory.activation_relief,\n        sales_directory.gross_activation_target,\n        sales_directory.max_activation_target,\n        sales_directory.marketing_hub_minimum,\n        sales_directory.sales_hub_minimum,\n        sales_directory.service_hub_minimum,\n        sales_directory.manager_quota_uplift\n\n    from sales_directory\n    left join\n        employees_joined on\n        sales_directory.anaplan_sales_directory_key = employees_joined.anaplan_sales_directory_key\n\n    where employees_joined.sales_directory_key is null\n\n),\n\nemployees_mapped as (\n\n    select\n        employees_unioned.*,\n\n        case sales_role\n            when 'VP' then 8\n            when 'Senior Director' then 7\n            when 'Director' then 6\n            when 'Senior Manager' then 5\n            when 'Manager' then 4\n            when 'Rep' then 3\n            when 'BDR' then 2\n            else 1\n        end as sales_role_rank,\n\n        row_number() over (\n            partition by\n                workday_employee_id,\n                report_month\n            order by sales_role_rank desc\n        ) = 1 as is_highest_employee_role_in_month,\n\n\n        row_number() over (\n            partition by\n                workday_employee_id,\n                report_month\n            order by sales_role_rank\n        ) = 1 as is_lowest_employee_role_in_month,\n\n        employees_unioned.termination_date is not null as is_terminated,\n\n        case\n            when country = 'North America'\n                then 'US'\n\n            when contains(lower(employee_location), '- us -')\n                then 'US'\n\n            when\n                employee_location in (\n                    'Cambridge, Massachusetts',\n                    'Portsmouth, New Hampshire',\n                    'San Francisco, California',\n                    'Flex - Cambridge, Massachusetts',\n                    'Flex - Portsmouth, New Hampshire',\n                    'Flex - San Francisco, California'\n                )\n                then 'US'\n\n            when\n                country = 'USA'\n                and employee_location is null\n                then 'US'\n\n            when contains(lower(employee_location), 'ireland')\n                then 'IE'\n\n            when\n                country in ('UK & I', 'EMEA', 'UK&I')\n                and employee_location is null\n                then 'IE'\n\n            when contains(lower(employee_location), 'united kingdom')\n                then 'GB'\n\n            when contains(lower(employee_location), 'australia')\n                then 'AU'\n\n            when\n                country = 'ANZ'\n                and employee_location is null\n                then 'AU'\n\n            when contains(lower(employee_location), 'germany')\n                then 'DE'\n\n            when\n                country = 'DACH'\n                and employee_location is null\n                then 'DE'\n\n            when contains(lower(employee_location), 'france')\n                then 'FR'\n\n            when\n                country = 'France'\n                and employee_location is null\n                then 'FR'\n\n            when\n                contains(lower(employee_location), 'singapore')\n                then 'SG'\n\n            when\n                country = 'SEA'\n                and employee_location is null\n                then 'SG'\n\n            when contains(lower(employee_location), 'india')\n                then 'IN'\n\n            when contains(lower(employee_location), 'japan')\n                then 'JP'\n\n            when\n                country = 'Japan'\n                and employee_location is null\n                then 'JP'\n\n            when contains(lower(employee_location), 'colombia')\n                then 'CO'\n\n            when\n                country in ('LATAM', 'Brazil')\n                and employee_location is null\n                then 'CO'\n\n            when contains(lower(employee_location), 'belgium')\n                then 'BE'\n\n            when\n                country = 'Benelux'\n                and employee_location is null\n                then 'BE'\n\n            when contains(lower(employee_location), 'netherlands')\n                then 'NL'\n\n            when\n                country = 'Nordics'\n                and employee_location is null\n                then 'NL'\n\n            when contains(lower(employee_location), 'canada')\n                then 'CA'\n\n            when\n                country = 'Canada'\n                and employee_location is null\n                then 'CA'\n\n            when contains(lower(employee_location), 'spain')\n                then 'ES'\n\n            when\n                country in ('Iberia', 'Spain')\n                and employee_location is null\n                then 'ES'\n\n        end as country_code_alpha2,\n\n        standardized_country_mapping.unified_sub_geography,\n        standardized_country_mapping.unified_geography,\n        standardized_segment_mapping.unified_sales_segment,\n        standardized_segment_mapping.unified_sales_segment_group\n\n    from employees_unioned\n    left join standardized_country_mapping\n        on standardized_country_mapping.source_country = employees_unioned.country\n    left join standardized_segment_mapping\n        on standardized_segment_mapping.source_sales_segment = employees_unioned.segment\n),\n\nsales_directory_cost_centers as (\n    select distinct cost_center_id\n    from employees_mapped\n    where anaplan_sales_directory_key is not null\n),\n\n/*\nIn the final output, include only \"sales employees\" by selecting employees that\nhave a cost center that's already represented in the sales directory. This\ndynamic filter ensures that relevant roles in sales organization continue to\nflow through, but that there's not noise from non-sales employees.\n*/\n\nfinal as (\n    select\n\n        employees_mapped.* exclude max_gross_quota,\n\n        coalesce(\n\n            -- If there is a max gross quota coming from Anaplan, this is the\n            -- preferred max gross quota to include\n            employees_mapped.max_gross_quota,\n\n            -- If there is a historically mapped max gross quota, that should be\n            -- preferred\n            historical_max_quotas.max_quota,\n\n            -- If there is neither of the above, default to the gross quota\n            employees_mapped.gross_quota\n\n        ) as max_gross_quota,\n\n        coalesce(\n\n            -- If there is a historically mapped is_ramped, that should be\n            -- preferred\n            historical_max_quotas.is_ramped,\n\n            -- If the max gross quota is the same as the gross quota, that\n            -- indicates that the employee has the ramped quota\n            max_gross_quota <= employees_mapped.gross_quota\n\n        ) as is_ramped_quota,\n\n        -- Inversion of is_ramped_quota for Looker ref\n        not is_ramped_quota as is_ramping_quota,\n\n        -- Default to the classification created in the unioned historical quotas table\n        nvl(\n            historical_max_quotas.historical_mapping_category,\n            /* if the max quota isn't being populated by a historical mapping, classify\n            it as a direct Anaplan Direct Map if there's a max_gross_quota present.\n            Otherwise, list it as unmapped. */\n            iff(max_gross_quota is not null, 'Anaplan Direct Map', 'Unmapped')\n        ) as historical_max_quota_mapping_category\n\n    from employees_mapped\n    left join\n        sales_directory_cost_centers on\n        employees_mapped.cost_center_id\n        = sales_directory_cost_centers.cost_center_id\n    left join\n        historical_max_quotas on\n        employees_mapped.sales_directory_key\n        = historical_max_quotas.sales_directory_key\n    where\n        employees_mapped.anaplan_sales_directory_key is not null\n        or sales_directory_cost_centers.cost_center_id is not null\n)\n\nselect * from final",
+      "relation_name": "prod_db.dbt_intermediate.int_sales_directory__employees_joined"
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:05.161256Z",
+          "completed_at": "2024-02-09T07:33:05.182591Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:05.187151Z",
+          "completed_at": "2024-02-09T07:33:05.560071Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.44304418563842773,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e0fc3"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_int_sales_directory__employees_joined_report_month.05d070638a",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect report_month\nfrom prod_db.dbt_intermediate.int_sales_directory__employees_joined\nwhere report_month is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:05.166910Z",
+          "completed_at": "2024-02-09T07:33:05.183185Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:05.190783Z",
+          "completed_at": "2024-02-09T07:33:05.558060Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 0.45441770553588867,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e1247"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_int_sales_directory__employees_joined_sales_directory_key.2487d87f67",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect sales_directory_key\nfrom prod_db.dbt_intermediate.int_sales_directory__employees_joined\nwhere sales_directory_key is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:05.172579Z",
+          "completed_at": "2024-02-09T07:33:05.185790Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:05.199434Z",
+          "completed_at": "2024-02-09T07:33:05.591860Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.48084235191345215,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e124b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_int_sales_directory__employees_joined_workday_employee_id.b1fe703ddd",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect workday_employee_id\nfrom prod_db.dbt_intermediate.int_sales_directory__employees_joined\nwhere workday_employee_id is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:05.177516Z",
+          "completed_at": "2024-02-09T07:33:05.183938Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:05.195936Z",
+          "completed_at": "2024-02-09T07:33:06.202443Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 1.0899057388305664,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e124f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.unique_int_sales_directory__employees_joined_sales_directory_key.338e0a5d6c",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nselect\n    sales_directory_key as unique_field,\n    count(*) as n_records\n\nfrom prod_db.dbt_intermediate.int_sales_directory__employees_joined\nwhere sales_directory_key is not null\ngroup by sales_directory_key\nhaving count(*) > 1\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "success",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:06.253161Z",
+          "completed_at": "2024-02-09T07:33:06.265806Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:06.267033Z",
+          "completed_at": "2024-02-09T07:33:21.070642Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 14.873047113418579,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e12db"
+      },
+      "message": "SUCCESS 1",
+      "failures": null,
+      "unique_id": "model.hs_datamodel.sales_directory",
+      "compiled": true,
+      "compiled_code": "\n\n\n    \n\n\n\n\n\n\n\nwith\n\nsales_directory_joined as (\n    select * from prod_db.dbt_intermediate.int_sales_directory__employees_joined\n),\n\nemployee_subsidiary as (\n    select * from prod_db.dbt_staging.employee_country_to_subsidiary_map\n),\n\nsales_directory__tenure_bucketed as (\n\n    select\n        *,\n\n        -- Segment related tenure bucket\n        \n    case\n        when final_month_in_funnel <= 6 then\n            '0-6'\n        when final_month_in_funnel <= 12 then\n            '7-12'\n        when final_month_in_funnel <= 18 then\n            '13-18'\n        else  '19+'\n    end\n as tenure_bucket,\n\n        \n    case\n        when final_month_in_funnel <= 6 then\n            1\n        when final_month_in_funnel <= 12 then\n            2\n        when final_month_in_funnel <= 18 then\n            3\n        else  4\n    end\n as tenure_bucket_sort,\n\n        \n    case\n        when final_month_in_funnel <= 6 then\n            '0-6'\n        when final_month_in_funnel <= 12 then\n            '7-12'\n        else  '13+'\n    end\n as tenure_bucket_historical,\n\n        \n    case\n        when final_month_in_funnel <= 6 then\n            1\n        when final_month_in_funnel <= 12 then\n            2\n        else  3\n    end\n as tenure_bucket_historical_sort,\n\n        -- HubSpot related tenure bucket\n        \n    case\n        when month_in_funnel <= 6 then\n            '0-6'\n        when month_in_funnel <= 12 then\n            '7-12'\n        when month_in_funnel <= 18 then\n            '13-18'\n        else  '19+'\n    end\n as hubspot_tenure_bucket,\n\n        \n    case\n        when month_in_funnel <= 6 then\n            1\n        when month_in_funnel <= 12 then\n            2\n        when month_in_funnel <= 18 then\n            3\n        else  4\n    end\n as hubspot_tenure_bucket_sort,\n\n        \n    case\n        when month_in_funnel <= 6 then\n            '0-6'\n        when month_in_funnel <= 12 then\n            '7-12'\n        else  '13+'\n    end\n as hubspot_tenure_bucket_historical,\n\n        \n    case\n        when month_in_funnel <= 6 then\n            1\n        when month_in_funnel <= 12 then\n            2\n        else  3\n    end\n as hubspot_tenure_bucket_historical_sort\n\n    from sales_directory_joined\n\n),\n\n/*\nQualify logic and join conditions for mapping tables. These variables simplify\nthe process of adding in new mapping tables.\n*/\n\n\n\n\n\n\n/*\nSegmentation mapping CTEs and joins. Each mapping table performs a wildcard join\non different properties found in a sales directory record (like `segment`,\n`country`, and `segment`) to map the record to the appropriate segment for the\ngiven category. To adjust a mapping, update the associated seed file. To create\na new mapping, craft a new seed file, construct a new CTE to pre-process the\nmapping, and join the CTE into the `sales_directory__segmented` CTE.\n*/\n\nsales_segmentation_mapping as (\n    select\n        sales_directory__tenure_bucketed.sales_directory_key,\n\n        coalesce(mapping.sales_go_to_market_segmentation, 'Undefined')\n        as sales_go_to_market_segmentation\n\n    from sales_directory__tenure_bucketed\n    left join\n        prod_db.team_gtm_core.seed_sales_directory_gtm_segmentation_mapping as mapping on\n        \n        coalesce(\n            lower(sales_directory__tenure_bucketed.country), 'NULL'\n        ) like coalesce(mapping.country, 'NULL')\n        and coalesce(\n            lower(sales_directory__tenure_bucketed.geography), 'NULL'\n        ) like coalesce(mapping.geography, 'NULL')\n\n        and \n        coalesce(\n            lower(sales_directory__tenure_bucketed.segment), 'NULL'\n        ) like coalesce(mapping.segment, 'NULL')\n\n    qualify\n        \n        row_number() over (\n            partition by sales_directory__tenure_bucketed.sales_directory_key\n            order by mapping.sort\n        ) = 1\n\n),\n\nsales_geography_segmentation_mapping as (\n    select\n        sales_directory__tenure_bucketed.sales_directory_key,\n\n        coalesce(mapping.sales_geography_based_segmentation, 'Undefined')\n        as sales_geography_based_segmentation\n\n    from sales_directory__tenure_bucketed\n    left join\n        prod_db.team_gtm_core.seed_sales_directory_sales_geography_segmentation_mapping as mapping on\n        \n        coalesce(\n            lower(sales_directory__tenure_bucketed.country), 'NULL'\n        ) like coalesce(mapping.country, 'NULL')\n        and coalesce(\n            lower(sales_directory__tenure_bucketed.geography), 'NULL'\n        ) like coalesce(mapping.geography, 'NULL')\n\n        and \n        coalesce(\n            lower(sales_directory__tenure_bucketed.segment), 'NULL'\n        ) like coalesce(mapping.segment, 'NULL')\n\n    qualify\n        \n        row_number() over (\n            partition by sales_directory__tenure_bucketed.sales_directory_key\n            order by mapping.sort\n        ) = 1\n\n),\n\nsales_country_segmentation_mapping as (\n    select\n        sales_directory__tenure_bucketed.sales_directory_key,\n        coalesce(mapping.sales_country_segmentation, 'Undefined') as sales_country_segmentation\n    from sales_directory__tenure_bucketed\n    left join\n        prod_db.team_gtm_core.seed_sales_directory_country_segmentation_mapping as mapping on\n        \n        coalesce(\n            lower(sales_directory__tenure_bucketed.country), 'NULL'\n        ) like coalesce(mapping.country, 'NULL')\n        and coalesce(\n            lower(sales_directory__tenure_bucketed.geography), 'NULL'\n        ) like coalesce(mapping.geography, 'NULL')\n\n    qualify\n        \n        row_number() over (\n            partition by sales_directory__tenure_bucketed.sales_directory_key\n            order by mapping.sort\n        ) = 1\n\n),\n\nhistorical_sales_segmentation_mapping as (\n   select\n        sales_directory__tenure_bucketed.sales_directory_key,\n\n        coalesce(mapping.historical_sales_go_to_market_segmentation, 'Undefined')\n        as historical_sales_go_to_market_segmentation,\n\n        coalesce(mapping.historical_sales_go_to_market_segmentation_sort, 16)\n        as historical_sales_go_to_market_segmentation_sort\n\n    from sales_directory__tenure_bucketed\n    left join\n        prod_db.team_gtm_core.seed_sales_directory_historical_gtm_segmentation_mapping as mapping on\n        \n        coalesce(\n            lower(sales_directory__tenure_bucketed.country), 'NULL'\n        ) like coalesce(mapping.country, 'NULL')\n        and coalesce(\n            lower(sales_directory__tenure_bucketed.geography), 'NULL'\n        ) like coalesce(mapping.geography, 'NULL')\n\n        and \n        coalesce(\n            lower(sales_directory__tenure_bucketed.segment), 'NULL'\n        ) like coalesce(mapping.segment, 'NULL')\n\n    qualify\n        \n        row_number() over (\n            partition by sales_directory__tenure_bucketed.sales_directory_key\n            order by mapping.sort\n        ) = 1\n\n),\n\nhistorical_sales_geography_segmentation_mapping as (\n   select\n        sales_directory__tenure_bucketed.sales_directory_key,\n\n        coalesce(mapping.historical_sales_geography_based_segmentation, 'Undefined')\n        as historical_sales_geography_based_segmentation,\n\n        coalesce(mapping.historical_sales_geography_based_segmentation_sort, 19)\n        as historical_sales_geography_based_segmentation_sort\n\n    from sales_directory__tenure_bucketed\n    left join\n        prod_db.team_gtm_core.seed_sales_directory_historical_sales_geography_segmentation_mapping as mapping on\n        \n        coalesce(\n            lower(sales_directory__tenure_bucketed.country), 'NULL'\n        ) like coalesce(mapping.country, 'NULL')\n        and coalesce(\n            lower(sales_directory__tenure_bucketed.geography), 'NULL'\n        ) like coalesce(mapping.geography, 'NULL')\n\n        and \n        coalesce(\n            lower(sales_directory__tenure_bucketed.segment), 'NULL'\n        ) like coalesce(mapping.segment, 'NULL')\n\n    qualify\n        \n        row_number() over (\n            partition by sales_directory__tenure_bucketed.sales_directory_key\n            order by mapping.sort\n        ) = 1\n\n),\n\nhistorical_sales_country_segmentation_mapping as (\n   select\n        sales_directory__tenure_bucketed.sales_directory_key,\n\n        coalesce(mapping.historical_sales_country_segmentation, 'Undefined')\n        as historical_sales_country_segmentation,\n\n        coalesce(mapping.historical_sales_country_segmentation_sort, 15)\n        as historical_sales_country_segmentation_sort\n\n    from sales_directory__tenure_bucketed\n    left join\n        prod_db.team_gtm_core.seed_sales_directory_historical_sales_country_segmentation_mapping as mapping on\n        \n        coalesce(\n            lower(sales_directory__tenure_bucketed.country), 'NULL'\n        ) like coalesce(mapping.country, 'NULL')\n        and coalesce(\n            lower(sales_directory__tenure_bucketed.geography), 'NULL'\n        ) like coalesce(mapping.geography, 'NULL')\n\n    qualify\n        \n        row_number() over (\n            partition by sales_directory__tenure_bucketed.sales_directory_key\n            order by mapping.sort\n        ) = 1\n\n),\n\ntop_of_waterfall_segment_mapping as (\n    select\n        sales_directory__tenure_bucketed.sales_directory_key,\n\n        coalesce(mapping.top_of_waterfall_segment, 'Undefined')\n        as top_of_waterfall_segment\n\n    from sales_directory__tenure_bucketed\n    left join\n        prod_db.team_gtm_core.seed_sales_directory_top_of_waterfall_segment_mapping as mapping on\n        \n        coalesce(\n            lower(sales_directory__tenure_bucketed.country), 'NULL'\n        ) like coalesce(mapping.country, 'NULL')\n        and coalesce(\n            lower(sales_directory__tenure_bucketed.geography), 'NULL'\n        ) like coalesce(mapping.geography, 'NULL')\n\n        and \n        coalesce(\n            lower(sales_directory__tenure_bucketed.segment), 'NULL'\n        ) like coalesce(mapping.segment, 'NULL')\n\n    qualify\n        \n        row_number() over (\n            partition by sales_directory__tenure_bucketed.sales_directory_key\n            order by mapping.sort\n        ) = 1\n\n),\n\nhistorical_top_of_waterfall_segment_mapping as (\n    select\n        sales_directory__tenure_bucketed.sales_directory_key,\n\n        coalesce(mapping.historical_top_of_waterfall_segment, 'Undefined')\n        as historical_top_of_waterfall_segment\n\n    from sales_directory__tenure_bucketed\n    left join\n        prod_db.team_gtm_core.seed_sales_directory_historical_top_of_waterfall_segment_mapping as mapping on\n        \n        coalesce(\n            lower(sales_directory__tenure_bucketed.country), 'NULL'\n        ) like coalesce(mapping.country, 'NULL')\n        and coalesce(\n            lower(sales_directory__tenure_bucketed.geography), 'NULL'\n        ) like coalesce(mapping.geography, 'NULL')\n\n        and \n        coalesce(\n            lower(sales_directory__tenure_bucketed.segment), 'NULL'\n        ) like coalesce(mapping.segment, 'NULL')\n\n    qualify\n       \n        row_number() over (\n            partition by sales_directory__tenure_bucketed.sales_directory_key\n            order by mapping.sort\n        ) = 1\n\n),\n\nsales_directory__segmented as (\n    select\n        sales_directory__tenure_bucketed.*,\n\n        iff(\n            lower(country) in ('usa', 'canada') and report_month < '2021-01-01',\n            'North America',\n            country\n        ) as sub_geography_targets_join,\n\n        dateadd(\n            \"month\",\n            1 - month_in_funnel,\n            report_month\n        ) as first_month_in_funnel,\n\n        dateadd(\n            \"month\",\n            1 - segment_month_in_funnel,\n            report_month\n        ) as segment_first_month_in_funnel,\n\n        -- Current sales segmentation mappings based on geography, country, and segment.\n        sales_segmentation_mapping.sales_go_to_market_segmentation,\n        sales_geography_segmentation_mapping.sales_geography_based_segmentation,\n        sales_country_segmentation_mapping.sales_country_segmentation,\n\n        -- Historical sales segmentation mappings. These include fields for sorting in Looker.\n        historical_sales_segmentation_mapping.historical_sales_go_to_market_segmentation,\n        historical_sales_segmentation_mapping.historical_sales_go_to_market_segmentation_sort,\n        historical_sales_geography_segmentation_mapping.historical_sales_geography_based_segmentation,\n        historical_sales_geography_segmentation_mapping.historical_sales_geography_based_segmentation_sort,\n        historical_sales_country_segmentation_mapping.historical_sales_country_segmentation,\n        historical_sales_country_segmentation_mapping.historical_sales_country_segmentation_sort,\n\n        /*\n            Following logic was moved from looker view files upstream to this\n            file on feb 7th, 2023 due to performance reasons. Original view file\n            sales.views.sales_daily_delta_mrr_enriched_explore_fields\n        */\n\n        case lower(geography)\n            when 'north america' then 'AMER'\n            when 'latam' then 'AMER'\n            when 'emea' then 'EMEA'\n            when 'apac' then 'APAC'\n            else 'Undefined'\n        end as top_of_waterfall_geography,\n\n        case\n            when lower(geography) in ('north america')\n                then 'North America'\n            when lower(geography) in ('emea', 'apac', 'latam')\n                then 'International'\n            else 'Undefined'\n        end as historical_top_of_waterfall_geography,\n\n        top_of_waterfall_segment_mapping.top_of_waterfall_segment,\n        historical_top_of_waterfall_segment_mapping.historical_top_of_waterfall_segment\n\n    from sales_directory__tenure_bucketed\n    left join sales_segmentation_mapping on\n        sales_directory__tenure_bucketed.sales_directory_key =\n        sales_segmentation_mapping.sales_directory_key\n\n    left join sales_geography_segmentation_mapping on\n        sales_directory__tenure_bucketed.sales_directory_key =\n        sales_geography_segmentation_mapping.sales_directory_key\n\n    left join sales_country_segmentation_mapping on\n        sales_directory__tenure_bucketed.sales_directory_key =\n        sales_country_segmentation_mapping.sales_directory_key\n\n    left join historical_sales_segmentation_mapping on\n        sales_directory__tenure_bucketed.sales_directory_key =\n        historical_sales_segmentation_mapping.sales_directory_key\n\n    left join historical_sales_geography_segmentation_mapping on\n        sales_directory__tenure_bucketed.sales_directory_key =\n        historical_sales_geography_segmentation_mapping.sales_directory_key\n\n    left join historical_sales_country_segmentation_mapping on\n        sales_directory__tenure_bucketed.sales_directory_key =\n        historical_sales_country_segmentation_mapping.sales_directory_key\n\n    left join top_of_waterfall_segment_mapping on\n        sales_directory__tenure_bucketed.sales_directory_key =\n        top_of_waterfall_segment_mapping.sales_directory_key\n\n    left join historical_top_of_waterfall_segment_mapping on\n        sales_directory__tenure_bucketed.sales_directory_key =\n        historical_top_of_waterfall_segment_mapping.sales_directory_key\n),\n\n\njob_profile_changes as (\n    select\n        sales_directory_key,\n        report_month,\n        workday_employee_id,\n        job_profile,\n        nvl(\n            job_profile != lag(job_profile) over (\n                partition by workday_employee_id\n                order by report_month\n            ),\n            true\n        ) as is_job_change\n\n    from sales_directory__segmented\n\n    where is_highest_employee_role_in_month\n\n    qualify is_job_change = true\n\n),\n\njob_profile_rollup as (\n    select\n        sales_directory__segmented.sales_directory_key,\n\n        listagg(job_profile_changes.job_profile, ' | ') within group (\n            order by job_profile_changes.report_month\n        ) as job_profiles_prior\n\n    from sales_directory__segmented\n    left join job_profile_changes on\n        sales_directory__segmented.workday_employee_id = job_profile_changes.workday_employee_id\n        and job_profile_changes.report_month <= sales_directory__segmented.report_month\n\n    group by all\n\n),\n\nfinal as (\n\n    select\n        sales_directory__segmented.*,\n        iff(\n            nvl(sales_directory__segmented.segment_month_in_funnel, 0) = 0,\n            sales_directory__segmented.month_in_funnel,\n            sales_directory__segmented.segment_month_in_funnel\n        ) as month_in_funnel_for_ppr,\n\n\n        last_value(sales_directory__segmented.segment) respect nulls over (\n            partition by sales_directory__segmented.workday_employee_id\n            order by sales_directory__segmented.report_month)       as latest_segment,\n\n        last_value(sales_directory__segmented.sales_role) respect nulls over (\n            partition by sales_directory__segmented.workday_employee_id\n            order by sales_directory__segmented.report_month)       as latest_sales_role,\n\n        last_value(sales_directory__segmented.segment_role) respect nulls over (\n            partition by sales_directory__segmented.workday_employee_id\n            order by sales_directory__segmented.report_month)       as latest_segment_role,\n\n        last_value(sales_directory__segmented.job_family) respect nulls over (\n            partition by sales_directory__segmented.workday_employee_id\n            order by sales_directory__segmented.report_month)       as latest_job_family,\n\n        max(sales_directory__segmented.report_month) over (\n            partition by sales_directory__segmented.workday_employee_id\n            )                                                       as latest_report_month,\n\n        latest_report_month = date_trunc('month', current_date())   as is_current_sales_employee,\n\n\n        /*\n            Logic from _map_employee_country_to_subsidiary.view.lkml as of\n            2023-04-28. - K. Fox.\n        */\n        employee_subsidiary.subsidiary as employee_subsidiary_name,\n        employee_subsidiary.geography as employee_subsidiary_geography,\n        employee_subsidiary.sales_geography as employee_subsidiary_sales_geography,\n        job_profile_rollup.job_profiles_prior,\n\n        lower(sales_directory__segmented.sales_role) = 'rep'\n        and (job_profile_rollup.job_profiles_prior ilike '%bdr%'\n        or job_profile_rollup.job_profiles_prior ilike '%igs%'\n        or job_profile_rollup.job_profiles_prior ilike 'inbound growth specialist')\n        as is_rep_was_bdr,\n\n        count (distinct sales_directory__segmented.segment)\n        over (partition by sales_directory__segmented.workday_employee_id) > 1\n        as has_switched_segments,\n\n        count (distinct sales_directory__segmented.hire_date)\n        over (partition by sales_directory__segmented.workday_employee_id) > 1\n        as is_rehire\n\n    from sales_directory__segmented\n\n    left join\n        employee_subsidiary on\n        sales_directory__segmented.country = employee_subsidiary.country\n\n    left join\n        job_profile_rollup on\n        sales_directory__segmented.sales_directory_key = job_profile_rollup.sales_directory_key\n)\n\nselect * from final",
+      "relation_name": "prod_db.team_gtm_core.sales_directory"
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:21.145800Z",
+          "completed_at": "2024-02-09T07:33:21.162310Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:21.170300Z",
+          "completed_at": "2024-02-09T07:33:21.997954Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.9017753601074219,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e233f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.accepted_values_sales_directory_hubspot_tenure_bucket_historical__0_6__7_12__13_.96eed0e311",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nwith all_values as (\n\n    select\n        hubspot_tenure_bucket_historical as value_field,\n        count(*) as n_records\n\n    from prod_db.team_gtm_core.sales_directory\n    group by hubspot_tenure_bucket_historical\n\n)\n\nselect *\nfrom all_values\nwhere value_field not in (\n    '0-6','7-12','13+'\n)\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:21.155748Z",
+          "completed_at": "2024-02-09T07:33:21.164333Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:21.178262Z",
+          "completed_at": "2024-02-09T07:33:22.003587Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.9109859466552734,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e15e3"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.accepted_values_sales_directory_tenure_bucket__0_6__7_12__13_18__19_.12423dfb48",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nwith all_values as (\n\n    select\n        tenure_bucket as value_field,\n        count(*) as n_records\n\n    from prod_db.team_gtm_core.sales_directory\n    group by tenure_bucket\n\n)\n\nselect *\nfrom all_values\nwhere value_field not in (\n    '0-6','7-12','13-18','19+'\n)\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:21.150736Z",
+          "completed_at": "2024-02-09T07:33:21.163148Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:21.173669Z",
+          "completed_at": "2024-02-09T07:33:22.012726Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 0.9277682304382324,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e15df"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.accepted_values_sales_directory_sales_role__BDR__Director__Individual_Contributor__Manager__Rep__Senior_Director__Senior_Manager__VP.d57583589a",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nwith all_values as (\n\n    select\n        sales_role as value_field,\n        count(*) as n_records\n\n    from prod_db.team_gtm_core.sales_directory\n    group by sales_role\n\n)\n\nselect *\nfrom all_values\nwhere value_field not in (\n    'BDR','Director','Individual Contributor','Manager','Rep','Senior Director','Senior Manager','VP'\n)\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:22.058549Z",
+          "completed_at": "2024-02-09T07:33:22.067250Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:22.071550Z",
+          "completed_at": "2024-02-09T07:33:22.287528Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.27876806259155273,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e1613"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_historical_sales_country_segmentation.628d09be75",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect historical_sales_country_segmentation\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere historical_sales_country_segmentation is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:22.077642Z",
+          "completed_at": "2024-02-09T07:33:22.085440Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:22.088267Z",
+          "completed_at": "2024-02-09T07:33:22.345192Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 0.3365132808685303,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e2353"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_historical_sales_country_segmentation_sort.c969c5b69b",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect historical_sales_country_segmentation_sort\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere historical_sales_country_segmentation_sort is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:22.337656Z",
+          "completed_at": "2024-02-09T07:33:22.346893Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:22.349446Z",
+          "completed_at": "2024-02-09T07:33:22.555671Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.26003122329711914,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e161b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_historical_sales_geography_based_segmentation.1a0b16bb51",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect historical_sales_geography_based_segmentation\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere historical_sales_geography_based_segmentation is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:21.139608Z",
+          "completed_at": "2024-02-09T07:33:21.161760Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:21.166356Z",
+          "completed_at": "2024-02-09T07:33:22.600312Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 1.5112874507904053,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e233b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.accepted_values_sales_directory_hubspot_tenure_bucket__0_6__7_12__13_18__19_.fd1079e111",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nwith all_values as (\n\n    select\n        hubspot_tenure_bucket as value_field,\n        count(*) as n_records\n\n    from prod_db.team_gtm_core.sales_directory\n    group by hubspot_tenure_bucket\n\n)\n\nselect *\nfrom all_values\nwhere value_field not in (\n    '0-6','7-12','13-18','19+'\n)\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:22.416552Z",
+          "completed_at": "2024-02-09T07:33:22.421416Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:22.422630Z",
+          "completed_at": "2024-02-09T07:33:22.686980Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 0.33725953102111816,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e236b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_historical_sales_geography_based_segmentation_sort.bd775e6fee",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect historical_sales_geography_based_segmentation_sort\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere historical_sales_geography_based_segmentation_sort is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:22.604153Z",
+          "completed_at": "2024-02-09T07:33:22.610120Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:22.611426Z",
+          "completed_at": "2024-02-09T07:33:22.829670Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.26345181465148926,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e236f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_historical_sales_go_to_market_segmentation.de310bd851",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect historical_sales_go_to_market_segmentation\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere historical_sales_go_to_market_segmentation is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:22.756694Z",
+          "completed_at": "2024-02-09T07:33:22.761799Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:22.763003Z",
+          "completed_at": "2024-02-09T07:33:23.004165Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 0.28833866119384766,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e237b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_historical_top_of_waterfall_geography.e945544abd",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect historical_top_of_waterfall_geography\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere historical_top_of_waterfall_geography is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:22.648246Z",
+          "completed_at": "2024-02-09T07:33:22.653813Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:22.655013Z",
+          "completed_at": "2024-02-09T07:33:23.012699Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.4102165699005127,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e1627"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_historical_sales_go_to_market_segmentation_sort.5f90b073ce",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect historical_sales_go_to_market_segmentation_sort\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere historical_sales_go_to_market_segmentation_sort is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:22.041449Z",
+          "completed_at": "2024-02-09T07:33:22.050595Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:22.053834Z",
+          "completed_at": "2024-02-09T07:33:23.070593Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 1.0794093608856201,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e160f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.accepted_values_sales_directory_tenure_bucket_historical__0_6__7_12__13_.c6782b72c8",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nwith all_values as (\n\n    select\n        tenure_bucket_historical as value_field,\n        count(*) as n_records\n\n    from prod_db.team_gtm_core.sales_directory\n    group by tenure_bucket_historical\n\n)\n\nselect *\nfrom all_values\nwhere value_field not in (\n    '0-6','7-12','13+'\n)\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:22.868744Z",
+          "completed_at": "2024-02-09T07:33:22.873762Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:22.875025Z",
+          "completed_at": "2024-02-09T07:33:23.161356Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.337583065032959,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e1633"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_historical_top_of_waterfall_segment.bcdbb90d87",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect historical_top_of_waterfall_segment\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere historical_top_of_waterfall_segment is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.048280Z",
+          "completed_at": "2024-02-09T07:33:23.055072Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.057526Z",
+          "completed_at": "2024-02-09T07:33:23.381750Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 0.39078617095947266,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e238f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_hubspot_tenure_bucket.6c30ff8b12",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect hubspot_tenure_bucket\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere hubspot_tenure_bucket is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.123175Z",
+          "completed_at": "2024-02-09T07:33:23.127676Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.128840Z",
+          "completed_at": "2024-02-09T07:33:23.388584Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.318636417388916,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e163f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_report_month.f6a1af1757",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect report_month\nfrom prod_db.team_gtm_core.sales_directory\nwhere report_month is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.071939Z",
+          "completed_at": "2024-02-09T07:33:23.078532Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.080713Z",
+          "completed_at": "2024-02-09T07:33:23.394255Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.37679052352905273,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e238b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_hubspot_tenure_bucket_historical.a2541f8e01",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect hubspot_tenure_bucket_historical\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere hubspot_tenure_bucket_historical is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.209269Z",
+          "completed_at": "2024-02-09T07:33:23.215632Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.217411Z",
+          "completed_at": "2024-02-09T07:33:23.421213Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.27889156341552734,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e2397"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_sales_country_segmentation.aae8ac2656",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect sales_country_segmentation\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere sales_country_segmentation is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.503735Z",
+          "completed_at": "2024-02-09T07:33:23.508805Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.510505Z",
+          "completed_at": "2024-02-09T07:33:23.762192Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.3028383255004883,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e1647"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_tenure_bucket.fad0212fc6",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect tenure_bucket\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere tenure_bucket is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.452957Z",
+          "completed_at": "2024-02-09T07:33:23.470478Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.472960Z",
+          "completed_at": "2024-02-09T07:33:23.774809Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 0.3797159194946289,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e239f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_sales_directory_key.d4387534d0",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect sales_directory_key\nfrom prod_db.team_gtm_core.sales_directory\nwhere sales_directory_key is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.459833Z",
+          "completed_at": "2024-02-09T07:33:23.471919Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.478697Z",
+          "completed_at": "2024-02-09T07:33:23.825961Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.4252488613128662,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e164b"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_sales_geography_based_segmentation.a6a2318299",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect sales_geography_based_segmentation\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere sales_geography_based_segmentation is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.464741Z",
+          "completed_at": "2024-02-09T07:33:23.472447Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.482171Z",
+          "completed_at": "2024-02-09T07:33:23.815361Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.42532801628112793,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e23a7"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_sales_go_to_market_segmentation.80227abc6e",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect sales_go_to_market_segmentation\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere sales_go_to_market_segmentation is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.806751Z",
+          "completed_at": "2024-02-09T07:33:23.815893Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.820525Z",
+          "completed_at": "2024-02-09T07:33:24.090951Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.3490316867828369,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e1657"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_tenure_bucket_historical.78e6db4d34",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect tenure_bucket_historical\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere tenure_bucket_historical is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.899974Z",
+          "completed_at": "2024-02-09T07:33:23.905873Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.911423Z",
+          "completed_at": "2024-02-09T07:33:24.144006Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.3034536838531494,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e23bf"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_workday_employee_id.4013846cbe",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect workday_employee_id\nfrom prod_db.team_gtm_core.sales_directory\nwhere workday_employee_id is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.895349Z",
+          "completed_at": "2024-02-09T07:33:23.904744Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.906590Z",
+          "completed_at": "2024-02-09T07:33:24.169305Z"
+        }
+      ],
+      "thread_id": "Thread-34",
+      "execution_time": 0.3445448875427246,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e165f"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_top_of_waterfall_segment.2bb8a85a39",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect top_of_waterfall_segment\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere top_of_waterfall_segment is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:23.838846Z",
+          "completed_at": "2024-02-09T07:33:23.845471Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:23.848013Z",
+          "completed_at": "2024-02-09T07:33:24.185236Z"
+        }
+      ],
+      "thread_id": "Thread-35",
+      "execution_time": 0.39393091201782227,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e85-0001-6902906e23bb"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.not_null_sales_directory_top_of_waterfall_geography.4c4f1452ff",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\n\n\nselect top_of_waterfall_geography\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere top_of_waterfall_geography is null\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:24.159514Z",
+          "completed_at": "2024-02-09T07:33:24.169836Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:24.173177Z",
+          "completed_at": "2024-02-09T07:33:24.906753Z"
+        }
+      ],
+      "thread_id": "Thread-36",
+      "execution_time": 0.7906448841094971,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e1673"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.unique_sales_directory_anaplan_sales_directory_key.ce655a1a06",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nselect\n    anaplan_sales_directory_key as unique_field,\n    count(*) as n_records\n\nfrom (select * from prod_db.team_gtm_core.sales_directory where is_in_anaplan_sales_directory = true) dbt_subquery\nwhere anaplan_sales_directory_key is not null\ngroup by anaplan_sales_directory_key\nhaving count(*) > 1\n\n\n",
+      "relation_name": null
+    },
+    {
+      "status": "pass",
+      "timing": [
+        {
+          "name": "compile",
+          "started_at": "2024-02-09T07:33:24.195560Z",
+          "completed_at": "2024-02-09T07:33:24.201746Z"
+        },
+        {
+          "name": "execute",
+          "started_at": "2024-02-09T07:33:24.203452Z",
+          "completed_at": "2024-02-09T07:33:24.930125Z"
+        }
+      ],
+      "thread_id": "Thread-33",
+      "execution_time": 0.7794828414916992,
+      "adapter_response": {
+        "_message": "SUCCESS 1",
+        "code": "SUCCESS",
+        "rows_affected": 1,
+        "query_id": "01b23b05-0609-0e86-0001-6902906e1677"
+      },
+      "message": null,
+      "failures": 0,
+      "unique_id": "test.hs_datamodel.unique_sales_directory_sales_directory_key.b13e567742",
+      "compiled": true,
+      "compiled_code": "\n    \n    \n\nselect\n    sales_directory_key as unique_field,\n    count(*) as n_records\n\nfrom prod_db.team_gtm_core.sales_directory\nwhere sales_directory_key is not null\ngroup by sales_directory_key\nhaving count(*) > 1\n\n\n",
+      "relation_name": null
+    }
+  ],
+  "elapsed_time": 156.54004907608032,
+  "args": {
+    "static_parser": true,
+    "macro_debugging": false,
+    "invocation_command": "dbt --log-format json --debug build --select tag:sales_directory --target prod --profile user --profiles-dir /tmp/jobs/250062726/.dbt --project-dir /tmp/jobs/250062726/target",
+    "vars": {},
+    "print": true,
+    "partial_parse": true,
+    "profile": "user",
+    "log_format_file": "json",
+    "log_path": "/tmp/jobs/250062726/target/logs",
+    "select": ["tag:sales_directory"],
+    "project_dir": "/tmp/jobs/250062726/target",
+    "send_anonymous_usage_stats": true,
+    "write_json": true,
+    "resource_types": [],
+    "log_level_file": "debug",
+    "partial_parse_file_diff": true,
+    "version_check": true,
+    "target": "prod",
+    "enable_legacy_logger": false,
+    "exclude": [],
+    "populate_cache": true,
+    "warn_error_options": { "include": [], "exclude": [] },
+    "which": "build",
+    "quiet": false,
+    "use_colors_file": true,
+    "indirect_selection": "eager",
+    "cache_selected_only": false,
+    "log_file_max_bytes": 10485760,
+    "log_format": "json",
+    "strict_mode": false,
+    "printer_width": 80,
+    "include_saved_query": false,
+    "show_resource_report": false,
+    "profiles_dir": "/tmp/jobs/250062726/.dbt",
+    "favor_state": false,
+    "defer": false,
+    "show": false,
+    "debug": true,
+    "log_level": "info",
+    "use_colors": true,
+    "introspect": true
+  }
+}

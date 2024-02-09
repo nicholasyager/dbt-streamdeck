@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>dbt-streamdeck Model Configuration</title>
+    <link rel="stylesheet" href="../../../libs/css/sdpi.css" />
+  </head>
+
+  <body>
+    <div class="sdpi-wrapper">
+      <div type="tabs" class="sdpi-item">
+        <div class="sdpi-item-label empty"></div>
+        <div class="tabs">
+          <div
+            class="tab selected"
+            data-target="#tab1"
+            title="Show some inputs"
+          >
+            Model
+          </div>
+          <div class="tab" data-target="#tab2" title="dbt Cloud Configuration">
+            dbt Cloud
+          </div>
+        </div>
+      </div>
+      <hr class="tab-separator" />
+      <form id="property-inspector">
+        <div id="tab1" class="tab-container">
+          <div class="sdpi-item">
+            <div data-localize class="sdpi-item-label" title="My name">
+              dbt Project
+            </div>
+            <input
+              data-localize
+              class="sdpi-item-value"
+              name="project"
+              type="text"
+              value="ops_team"
+            />
+          </div>
+
+          <div class="sdpi-item">
+            <div class="sdpi-item-label" data-localize title="My message">
+              Model Name
+            </div>
+            <input
+              data-localize
+              class="sdpi-item-value"
+              name="model"
+              type="text"
+              value=""
+              placeholder="Model Name"
+            />
+          </div>
+
+          <div class="sdpi-item">
+            <div data-localize class="sdpi-item-label" title="Job ID">
+              Job ID
+            </div>
+            <input
+              data-localize
+              class="sdpi-item-value"
+              name="jobId"
+              type="number"
+              placeholder="123456"
+            />
+          </div>
+          <div class="sdpi-item">
+            <input
+              type="button"
+              class="sdpi-item-value"
+              value="Save"
+              data-localize
+              id="open-external"
+              onclick="handleSubmit()"
+            />
+          </div>
+        </div>
+      </form>
+      <form id="global-settings">
+        <div id="tab2" class="tab-container">
+          <div class="sdpi-item">
+            <div data-localize class="sdpi-item-label" title="Base URL">
+              dbt Cloud Base URL
+            </div>
+            <input
+              data-localize
+              class="sdpi-item-value"
+              name="baseURL"
+              type="text"
+              value="https://cloud.getdbt.com"
+            />
+          </div>
+          <div class="sdpi-item">
+            <div data-localize class="sdpi-item-label" title="Account Id">
+              Account ID
+            </div>
+            <input
+              data-localize
+              class="sdpi-item-value"
+              name="accountId"
+              type="number"
+              placeholder="12345"
+            />
+          </div>
+          <div class="sdpi-item">
+            <div data-localize class="sdpi-item-label" title="API Key">
+              API Key
+            </div>
+            <input
+              data-localize
+              class="sdpi-item-value"
+              name="apiKey"
+              type="text"
+            />
+          </div>
+          <div class="sdpi-item">
+            <input
+              type="button"
+              class="sdpi-item-value"
+              value="Save"
+              data-localize
+              id="open-external"
+              onclick="handleGlobalSubmit()"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="sdpi-info-label hidden" style="top: -1000" value=""></div>
+
+    <!-- Stream Deck Libs -->
+    <script src="../../../libs/js/constants.js"></script>
+    <script src="../../../libs/js/prototypes.js"></script>
+    <script src="../../../libs/js/timers.js"></script>
+    <script src="../../../libs/js/utils.js"></script>
+    <script src="../../../libs/js/events.js"></script>
+    <script src="../../../libs/js/api.js"></script>
+    <script src="../../../libs/js/property-inspector.js"></script>
+    <script src="../../../libs/js/dynamic-styles.js"></script>
+
+    <!-- Property Inspector Source -->
+    <script src="configuration.js"></script>
+  </body>
+</html>
